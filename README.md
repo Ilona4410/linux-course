@@ -1,2 +1,2 @@
-# linux-course
+# Linux-course
 Homework reports for Linux course
