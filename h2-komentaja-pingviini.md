@@ -39,4 +39,19 @@ $ man ls - avautuu less-näkymään
 $ ls --help
 $ wget -h - esim. komennoista joissa sisäänrakennettu ohje
 
+## Historia ja muokkaus
+$ ls /etc/re[tab][tab]
+reportbug.conf  resolvconf/     resolv.conf - Tab kahdesti näyttää vaihtoehdot
+
+$ history - näyttää historian
+
+## Tärkeät hakemistot
+/ – juurihakemisto. /home/tero/ – käyttäjän tero kotihakemisto. /etc/ - järjestelmän asetukset. /var/log/ - lokit
+
+## Hallinnolliset komennot ja oikeudet
+- Vähimmän oikeuden periaatteen mukaisesti tulisi käyttää normaalia käyttäjää. Korotetu oikeudet vain tarvittaessa sudo -komennolla
+- Ohjelmien turvallisesti asentaminen: pakettienhallinta. $ sudo apt-get update - päivittää saatavilla olevien pakettien listan
+
+$ sudo apt-get -y install nethack-console - asentaa ohjelman
+
 
