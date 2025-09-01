@@ -9,7 +9,7 @@ $ cd terosdir/ - cd (kansion nimi) siirtyy alihakemistoon
 
 $ cd .. - siirtyy hakemistossa yhden ylöspäin
 
-$ less tero.txt - näyttää tekstitiedoston. Välilyönti = seuraava sivu, b = edellinen sivu, / = haku, q = sulje
+$ less tero.txt - näyttää tekstitiedoston less-näkymässä. Välilyönti = seuraava sivu, b = edellinen sivu, / = haku, q = sulje
 
 $ ls /etc|less - ls /etc listaa kansion /etc sisällön. Pystyviiva | avaa rivit näkymään, jossa pystyy etsimään ja selaamaan
 
@@ -32,3 +32,11 @@ $ rm -r FOLDEROFJUNK - poistaa kansion ja sen sisällön HUOM. rm:stä ei saa pa
 $ ssh tero@example.com - avaa turvallisen etäkomentorivin. Komennolla w näkee muut kirjautuneet käyttäjät. Komennolla exit takaisin omalle koneelle
 
 $ scp -r FOLDER tero@example.com:public_html/ - kopioi kansion etäkoneen hakemistoon
+
+## Ohjeet (Help)
+$ man ls - avautuu less-näkymään
+
+$ ls --help
+$ wget -h - esim. komennoista joissa sisäänrakennettu ohje
+
+
