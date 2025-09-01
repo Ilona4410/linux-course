@@ -1,5 +1,4 @@
 # Komentorivin perusteet
-(Lähde: Karvinen 2020:https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited)
 
 ## Liikkuminen ja katselu
 $ pwd - näyttää työhakemiston
@@ -54,5 +53,7 @@ $ history - näyttää historian
 - Ohjelmien turvallisesti asentaminen: pakettienhallinta. $ sudo apt-get update - päivittää saatavilla olevien pakettien listan
 
 $ sudo apt-get -y install nethack-console - asentaa ohjelman
+
+(Lähde: Karvinen 2020:https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited)
 
 
