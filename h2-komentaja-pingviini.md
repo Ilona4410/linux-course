@@ -1,1 +1,2 @@
-# Command Line Basics
+# Komentorivin perusteet
+## Liikkuminen ja katselu
