@@ -72,4 +72,13 @@ $ sudo apt-get -y install nethack-console - asentaa ohjelman
 
    ![12](images/kuva-12.png)
 
+# b) APT - Komentoriviohjelman asennus
+1. En ehkä täysin ymmärtänyt mitä tässä tehtävässä tuli tehdä. Selvitin tekoälyn avulla, että ohjeissa mainitulla komennolla apt-cache search version control voi etsiä pakettihakemistosta “version control” liittyviä ohjelmia. Syötin tämän komennon ja sain pitkän listan. Koska olen Linuxin käytössä vasta-alkaja, olisin ehkä osannut asentaa kolme ohjelmaa samalla kertaa komennolla sudo apt-get update && sudo apt-get install -y (ohjelmien nimet lueteltuina), mutta en olisi osannut käyttää näitä. Tämän sijaan latasin aikaisemmin oppitunnilla jonkun esitelleen cowsayn. Lisäksi huomasin oppitunnilla, että komento tree ei toimi, joten latasin myös tämän. Ks. alla kuvat
+
+    ![apt](images/kuva-apt.png)
+
+    ![14](images/kuva-14.png)
+
+    ![13](images/kuva-13.png)
+
 
