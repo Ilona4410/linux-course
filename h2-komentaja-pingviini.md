@@ -56,4 +56,14 @@ $ sudo apt-get -y install nethack-console - asentaa ohjelman
 
 (Lähde: Karvinen 2020:https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited)
 
+# a) Micro-editorin asennus & kokeilu
+1. Minulla ei ollut mitään käsitystä, mikä Micro-editor on. Katsoin aiheesta youtube-videon The BEST Text Editor on Linux? - Micro Text Editor (https://www.youtube.com/watch?v=Jw9eJu-PY08). Lisäksi tutkin ominaisuuksia ja asennusohjetta osoitteessa https://github.com/zyedidia/micro?tab=readme-ov-file#installation. Micro on vähän niin kuin Notepad, mutta toimii komentorivillä. Se on helppokäyttöinen ja siinä toimii itsellenikin tutut pikanäppäimet esim. Ctrl+S, Ctrl+Q ja Ctrl+Z / Ctrl+Y
+2. Tein asennuksen seuraavilla komennoilla:
+
+   sudo apt-get update
+
+   sudo apt-get -y install micro
+3. Seuraavaksi loin tiedoston komennolla micro testi.txt ja tallensin & suljin Ctrl+S / Ctrl+Q
+4. Avasin työhakemiston komennolla ls ja tiedosto testi.txt oli tallentunut. Halusin siirtää tiedoston Documets-kansioon, joten syötin komennot mv testi.txt Documents/. Sitten varmistin että tämä onnistui komennolla ls Documents/. Ks. kuvat alta: 
+
 
