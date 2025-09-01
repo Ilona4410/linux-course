@@ -1,4 +1,5 @@
-# Komentorivin perusteet (Lähde: Karvinen 2020:https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited)
+# Komentorivin perusteet
+(Lähde: Karvinen 2020:https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited)
 
 ## Liikkuminen ja katselu
 $ pwd - näyttää työhakemiston
