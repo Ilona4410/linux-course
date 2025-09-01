@@ -64,6 +64,12 @@ $ sudo apt-get -y install nethack-console - asentaa ohjelman
 
    sudo apt-get -y install micro
 3. Seuraavaksi loin tiedoston komennolla micro testi.txt ja tallensin & suljin Ctrl+S / Ctrl+Q
-4. Avasin työhakemiston komennolla ls ja tiedosto testi.txt oli tallentunut. Halusin siirtää tiedoston Documets-kansioon, joten syötin komennot mv testi.txt Documents/. Sitten varmistin että tämä onnistui komennolla ls Documents/. Ks. kuvat alta: 
+4. Avasin työhakemiston komennolla ls ja tiedosto testi.txt oli tallentunut. Halusin siirtää tiedoston Documets-kansioon, joten syötin komennot mv testi.txt Documents/. Sitten varmistin että tämä onnistui komennolla ls Documents/. Ks. kuvat alta:
+
+   ![10](images/kuva-10.png)
+
+   ![11](images/kuva-11.png)
+
+   ![12](images/kuva-12.png)
 
 
