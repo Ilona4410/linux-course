@@ -81,4 +81,6 @@ $ sudo apt-get -y install nethack-console - asentaa ohjelman
 
     ![13](images/kuva-13.png)
 
+*c), d) ja e) tehtävät jäivät nyt kesken. Olen flunssassa ja teen nämä loppuun tervehdyttyäni
+
 
