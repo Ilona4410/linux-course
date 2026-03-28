@@ -12,6 +12,9 @@ Seuraavaksi latasin Debian Linux ISO-levykuvan debian-live-13.4.0-amd64-xfce.iso
 
 Loin virtuaalikoneen määrittämällä tärkeimmät resurssit: keskusmuisti RAM, prosessoriytimet ja levytilan. Käytin määrittelyssä EFI-käynnistystä, joka vastaa nykyistä laiteympäristöä. 
 
+<img width="416" height="214" alt="1" src="https://github.com/user-attachments/assets/34636f87-804b-415b-b984-119a335f2947" />
+
+
 Ennen varsinaista asennusta testasin järjestelmää live-tilassa. Tämän avulla varmistin, että käyttöjärjestelmä käynnistyy oikein ja että verkkoyhteys toimii. Alla pari kuvaa testeistä. 
 
 Tein varsinaisen asennuksen graafisella asennusohjelmalla. Tässä määrittelin kielen, aikavyöhykkeen, näppäimistön sekä käyttäjätiedot. Levyasetuksessa valitsin "Erase disk", jolla alustettiin virtuaalikoneen levy uutta asennusta varten. 
