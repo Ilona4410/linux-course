@@ -27,3 +27,11 @@ Asennuksen jälkeen käynnistin järjestelmän uudelleen kirjauduin sisään luo
 
 <img width="416" height="265" alt="2" src="https://github.com/user-attachments/assets/a8b1ee89-43d2-4f6b-bc50-b92d2a9c0c8b" />
 
+## Avoin lähdekoodi (open source software)
+
+Avoin lähdekoodi tarkoittaa ohjelmistoja (esim. Linux), joiden lähdekoodi on vapaasti kaikkien nähtävissä, muokattavissa ja jaettavissa. Tämä mahdollistaa sen, että kehittäjät ympäri maailmaa voivat osallistua ohjelmistojen kehittämiseen. Avoimessa lähdekoodissa käyttäjien on mahdollista tarkastella miten ohjelmaa ja toimii, ja tehdä haluamiansa muutoksia koodiin. (Coursera Staff 2025).
+
+Yhteistyö, läpinäkyvyys ja vapaus käyttää ohjelmistoa eri tarkoituksiin ovat avoimen lähdekoodin perusperiaatteita. Ohjelmistot ovat usein maksuttomia ja niitä voidaan muokata ilman suurempia rajoituksia linsenssitä riippuen. Avoin lähdekoodi on nykyään hyvin yleistä, ja suurin osa nykyaikaisista ohjelmistoista sisältää avoimen lähdekoodin komponentteja. (Coursera Staff 2025).
+
+Kustannustehokkuus, joustavuus ja aktiivinen kehittäjäyhteisö ovat avoimen lähdekoodin etuja. Nämä mahdollistavat ohjelmistojen jatkuvan parantamisen. Haasteina ovat esimerkiksi mahdollisest tietoturva-aukot, yhteensopivuusongelmat ja se, ettei ohjelmistolla ole yhtä vastuussa olevaa ylläpitäjää. (Coursera Staff 2025).
+
