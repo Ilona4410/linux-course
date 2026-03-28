@@ -14,8 +14,11 @@ Loin virtuaalikoneen määrittämällä tärkeimmät resurssit: keskusmuisti RAM
 
 <img width="416" height="214" alt="1" src="https://github.com/user-attachments/assets/34636f87-804b-415b-b984-119a335f2947" />
 
-
 Ennen varsinaista asennusta testasin järjestelmää live-tilassa. Tämän avulla varmistin, että käyttöjärjestelmä käynnistyy oikein ja että verkkoyhteys toimii. Alla pari kuvaa testeistä. 
+
+<img width="548" height="443" alt="3" src="https://github.com/user-attachments/assets/ea3e6907-3bec-4a52-a455-fdd22043db84" />
+
+<img width="416" height="310" alt="4" src="https://github.com/user-attachments/assets/822e8beb-f30d-4710-a601-37b44e474842" />
 
 Tein varsinaisen asennuksen graafisella asennusohjelmalla. Tässä määrittelin kielen, aikavyöhykkeen, näppäimistön sekä käyttäjätiedot. Levyasetuksessa valitsin "Erase disk", jolla alustettiin virtuaalikoneen levy uutta asennusta varten. 
 
