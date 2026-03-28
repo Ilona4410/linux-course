@@ -29,9 +29,29 @@ Asennuksen jälkeen käynnistin järjestelmän uudelleen kirjauduin sisään luo
 
 ## Avoin lähdekoodi (open source software)
 
-Avoin lähdekoodi tarkoittaa ohjelmistoja (esim. Linux), joiden lähdekoodi on vapaasti kaikkien nähtävissä, muokattavissa ja jaettavissa. Tämä mahdollistaa sen, että kehittäjät ympäri maailmaa voivat osallistua ohjelmistojen kehittämiseen. Avoimessa lähdekoodissa käyttäjien on mahdollista tarkastella miten ohjelmaa ja toimii, ja tehdä haluamiansa muutoksia koodiin. (Coursera Staff 2025).
+Avoin lähdekoodi tarkoittaa ohjelmistoja (esim. Linux), joiden lähdekoodi on vapaasti kaikkien nähtävissä, muokattavissa ja jaettavissa. Tämä mahdollistaa sen, että kehittäjät ympäri maailmaa voivat osallistua ohjelmistojen kehittämiseen. Avoimessa lähdekoodissa käyttäjien on mahdollista tarkastella miten ohjelma toimii, ja tehdä haluamiansa muutoksia koodiin. (Coursera Staff 2025).
 
-Yhteistyö, läpinäkyvyys ja vapaus käyttää ohjelmistoa eri tarkoituksiin ovat avoimen lähdekoodin perusperiaatteita. Ohjelmistot ovat usein maksuttomia ja niitä voidaan muokata ilman suurempia rajoituksia linsenssitä riippuen. Avoin lähdekoodi on nykyään hyvin yleistä, ja suurin osa nykyaikaisista ohjelmistoista sisältää avoimen lähdekoodin komponentteja. (Coursera Staff 2025).
+Yhteistyö, läpinäkyvyys ja vapaus käyttää ohjelmistoa eri tarkoituksiin ovat avoimen lähdekoodin perusperiaatteita. Ohjelmistot ovat usein maksuttomia ja niitä voidaan muokata ilman suurempia rajoituksia linsenssistä riippuen. Avoin lähdekoodi on nykyään hyvin yleistä, ja suurin osa nykyaikaisista ohjelmistoista sisältää avoimen lähdekoodin komponentteja. (Coursera Staff 2025).
 
 Kustannustehokkuus, joustavuus ja aktiivinen kehittäjäyhteisö ovat avoimen lähdekoodin etuja. Nämä mahdollistavat ohjelmistojen jatkuvan parantamisen. Haasteina ovat esimerkiksi mahdollisest tietoturva-aukot, yhteensopivuusongelmat ja se, ettei ohjelmistolla ole yhtä vastuussa olevaa ylläpitäjää. (Coursera Staff 2025).
+
+Avoin lähdekoodi mahdollistaa nopean kehityksen ja innovoinnin, koska suuri joukko kehittäjiä voi osallistua ohjelmistojen parantamiseen. Tämä on varmasti yksi syy sille, minkä takia teknologia kehittyy nykyisin niin nopeasti. Toisaalta tämä on myös välttämätöntä, sillä ilman nykyaikaista teknologiaa ja digitaalista infraa, eivät internet ja monet digitaaliset palvelut toimisi nykyisessä laajuudessaan. 
+
+Tulevaisuutta ajatellen haasteena voi olla ainakin se, että avoimen lähdekoodin käyttö voi vaatia enemmän teknistä osaamista, eikä ohjelmistoilla ole aina keskitettyä tukea tai vastuullista tahoa. Ainakin organisaatiot tarvitsevat yleensä valmiita ja tuettuja ratkaisuja. Toisaalta on hyvä, että avoin lähdekoodi vähentää riippuvuutta yksittäisistä yrityksistä. Tämä taas lisää itsenäisyyttä ja joustavuutta. 
+
+Lopuksi voisi sanoa, että nykyiselle digitaaliselle infralle avoin lähdekoodi on välttämätön, jotta uutta teknologiaa voidaan kehittää nopeasti ja tarkastella mahdollisimman läpinäkyvästi ja luotettavasti. 
+
+## Yhteenveto
+
+Opin asentamaan Debian Linux:in virtuaalikoneeseen ja tutustuin GitBHubin käyttöön tehtävien raportoinnissa. Lisäksi tutustuin avoimeen lähdekoodiin. Avoin lähdekoodi mahdollistaa teknologian jatkuvan kehityksen ja joustavuuden, mutta vaatii käyttäjiltä teknistä osaamista eikä välttämättä sovi kaikkiin ympäristöihin.  
+
+Käytännön harjoituksessa ymmärsin, kuinka virtuaalikone toimii erillisenä ympäristönä ilman vaikutusta pääjärjestelmääni. Opin myös muutaman peruskomennon harjoituksen testi-osiossa. 
+
+## Lähteet
+
+- Coursera Staff. 31.12.2025. What Is Open Source Software and Why Use OSS? Coursera. Luettavissa: https://www.coursera.org/articles/what-is-open-source-software. Luettu: 28.3.2026.
+- Debianin asennus - video. Linux-palvelimet -opintojakson esitysmateriaali Moodlessa. Haaga-Helia ammattikorkeakoulu. Katsottu 28.3.2026.
+- Heinonen, J. How to Install Linux to Virtualbox? Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/module_1.md. Luettu 28.3.2026.
+- VirtualBox Virtuaalikoneen luonti - video. Linux-palvelimet -opintojakson esitysmateriaali Moodlessa. Haaga-Helia ammattikorkeakoulu. Katsottu 28.3.2026.
+
 
