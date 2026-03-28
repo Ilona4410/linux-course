@@ -20,6 +20,7 @@ Ennen varsinaista asennusta testasin järjestelmää live-tilassa. Tämän avull
 
 <img width="416" height="310" alt="4" src="https://github.com/user-attachments/assets/822e8beb-f30d-4710-a601-37b44e474842" />
 
+
 Tein varsinaisen asennuksen graafisella asennusohjelmalla. Tässä määrittelin kielen, aikavyöhykkeen, näppäimistön sekä käyttäjätiedot. Levyasetuksessa valitsin "Erase disk", jolla alustettiin virtuaalikoneen levy uutta asennusta varten. 
 
 Asennuksen jälkeen käynnistin järjestelmän uudelleen kirjauduin sisään luomillani tunnuksilla. Lopuksi päivitin järjestelmän kahdella eri komennolla (sudo apt-get update ja sudo apt-get upgrade), jotta ohjelmistot olisivat ajan tasalla. Alla kuva. 
