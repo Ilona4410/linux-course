@@ -6,4 +6,14 @@ Edellä kuvattujen tehtävien tarkoituksena oli oppia asentamaan Linux sekä ymm
 
 ## Linuxin asentaminen omalle koneelle
 
+Asennuksen ensimmäisessä vaiheessa asensin VirtualBoxin (https://www.virtualbox.org/wiki/Downloads) ja varmistin, että virtualisointituki (VT-x) oli käytössä tietokoneeni UEFI/BIOS-asetuksissa. 
 
+Seuraavaksi latasin Debian Linux ISO-levykuvan debian-live-13.4.0-amd64-xfce.iso (https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-xfce.iso). ISO-tiedosto sisälsi käyttöjärjestelmän asennustiedot ja liitin tämän virtuaalikoneeseen. 
+
+Loin virtuaalikoneen määrittämällä tärkeimmät resurssit: keskusmuisti RAM, prosessoriytimet ja levytilan. Käytin määrittelyssä EFI-käynnistystä, joka vastaa nykyistä laiteympäristöä. 
+
+Ennen varsinaista asennusta testasin järjestelmää live-tilassa. Tämän avulla varmistin, että käyttöjärjestelmä käynnistyy oikein ja että verkkoyhteys toimii. Alla pari kuvaa testeistä. 
+
+Tein varsinaisen asennuksen graafisella asennusohjelmalla. Tässä määrittelin kielen, aikavyöhykkeen, näppäimistön sekä käyttäjätiedot. Levyasetuksessa valitsin "Erase disk", jolla alustettiin virtuaalikoneen levy uutta asennusta varten. 
+
+Asennuksen jälkeen käynnistin järjestelmän uudelleen kirjauduin sisään luomillani tunnuksilla. Lopuksi päivitin järjestelmän kahdella eri komennolla, jotta ohjelmistot olisivat ajan tasalla. Alla kuva. 
