@@ -13,7 +13,7 @@ Tech Infokartin YouTube videossa Guest Additions asennettiin graafisesti, mutta 
 - sudo apt update (pakettilistan päivitys)
 - sudo apt install build-essential dkms linux-headers-$(uname -r) (pakettien asennus)
 - sudo sh VBoxLinuxAdditions.run (asennusskriptin suorittaminen)
-- sudo reboot (järjestelmän uudelleenkäynnistys<9
+- sudo reboot (järjestelmän uudelleenkäynnistys)
 
 Opin tästä, että kopiointi ja liittäminen ovat VM:lle lisäominaisuuksia, ja näiden saaminen vaatii erillisten lisäosien asentamista. CD-asema, ISO-levykuva ja optinen asema sekä näiden merkitys ei kuitenkaan ihan selvinnyt. Opin kuitenkin hiukan komentorivin käyttöä.
 
