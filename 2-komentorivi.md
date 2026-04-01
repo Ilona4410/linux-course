@@ -1,4 +1,14 @@
-kesken
+# Komentorivi
+
+## Johdanto
+
+## 1. Basic Commands 
+
+## 2. Grep and Pipe
+
+## 3. btop
+
+## 4. Install Your Own Command-Line Application 
 
 ## Virhetilanne ja ratkaisu - (copy-paste)
 
