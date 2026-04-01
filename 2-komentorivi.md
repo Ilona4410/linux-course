@@ -6,7 +6,7 @@ Kurssin ensimmäisellä luennolla kävi ilmi, että minulla sekä muutamalla muu
 
 Tech Infokartin YouTube videossa Guest Additions asennettiin graafisesti, mutta omasta näkymästäni puuttui kohta "Run Software". Tästä syystä pyysin ChatGPT 5.3 -kielimallilta komennot tekemään sama komentorivillä. 
 
-### Suoritin seuraavat komennot ja sain copy-pasten toimimaan
+#### Suoritin seuraavat komennot ja sain copy-pasten toimimaan
 - cd /media/ilona/VBox_GAs_7.2.6 (hakemistoon siirtyminen)
 - sudo apt update (pakettilistan päivitys)
 - sudo apt install build-essential dkms linux-headers-$(uname -r) (pakettien asennus)
