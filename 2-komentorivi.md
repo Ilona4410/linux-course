@@ -1,6 +1,6 @@
 kesken
 
-## Virhetilanne ja ratkaisu - copy-paste
+## Virhetilanne ja ratkaisu - (copy-paste)
 
 Kurssin ensimmäisellä luennolla kävi ilmi, että minulla sekä muutamalla muulla ei toiminut kopiointi ja liittäminen oman koneen ja VM:n välillä. Päätin korjata tämän ongelman ennen, kuin alan harjoitella komentoja. Opettajan neuvosta varmistin, että Shared Clipboard ja Drag-and-Drop -asetukset ovat Bidirectional. Googlasin ongelmaa ensin hakusanoilla "VirtualBox Guest Additions Debian copy paste not working" ja löysin Tech Infokartin YouTube videon "Fix VirtualBox Copy-Paste Not Working: Windows 11 to Ubuntu 24.04 (2026)". Tämän jälkeen koitin liittää Guest Additions CD Imagen, mutta sain virheilmoituksen, jonka mukaan Debianin ISO-levykuva oli kiinni CD-asemassa. Ratkaisin tämän ChatGPT 5.3 -kielimallin avulla poistamalla ISO-tiedoston virtuaalikoneen asetuksista, jolloin CD-asema vapautui. Tämän jälkeen tuli uusi virhe: "Machine has no optical drives" eli CD-asema ei ollut käytössä, koska se jäi tyhjäksi. Ratkaisin tämän lisäämällä uuden tyhjän CD-aseman Storage-asetuksissa "Add Optical Drive". Tämän jälkeen sain onnistuneesti liitettyä Guest Additions CD Imagen. 
 
