@@ -21,7 +21,7 @@ Opin tästä, että kopiointi ja liittäminen ovat VM:lle lisäominaisuuksia, ja
 
 Tässä tehtävässä loin tehtävänannon mukaisen hakemistorakenteen tiedostoineen & tietoineen. 
 
-Loin ensin uuden kansion kotihakemistoon ja tämän alle kansiot. Loin neljä tiedostoa docs-kansioon. Alla kuva ja käytetyt komennot:
+### Loin ensin uuden kansion kotihakemistoon ja tämän alle kansiot. Loin neljä tiedostoa docs-kansioon. Alla kuva ja käytetyt komennot:
 
 <img width="400" height="235" alt="image" src="https://github.com/user-attachments/assets/54d9fd53-7124-40c1-991e-b1976233b6ce" />
 
@@ -31,7 +31,7 @@ Loin ensin uuden kansion kotihakemistoon ja tämän alle kansiot. Loin neljä ti
 - cd practice/docs
 - touch notes1.txt notes2.txt notes3.txt notes4.txt
 
-Tämän jälkeen muokkasin luotuja tiedostoja lisäämällä näihin 10 eläintä ja 10 hedelmää/vihannesta + nimesin tiedot uudelleen: 
+### Tämän jälkeen muokkasin luotuja tiedostoja lisäämällä näihin 10 eläintä ja 10 hedelmää/vihannesta + nimesin tiedot uudelleen: 
 
 - nano notes1.txt
 - nano notes2.txt
@@ -68,11 +68,20 @@ Salaatti
 Bataatti
 Sipuli
 ```
+### Tein tiedostoista varmuuskopiot backups-kansioon ja muokkasin animals.txt-tiedostoa poistamalla eläinten nimiä. Poistin vegetables.txt-tiedoston :
 
+- cp animals.txt ../backups/
+- cp vegetables.txt ../backups/
+- nano animals.txt (Ctrl + K rivin poisto)
+- rm vegetables.txt
 
+### Sitten palautin tiedostot varmuuskopioista docs-kansioon. Lopuksi tein arkistoinnin ja pakkauksen sekä loin uuden test-kansion johon purin arkiston. 
 
-  
+- tar -czvf archive/backup.tar.gz backups/
+- mkdir test
+- tar -xzvf archive/backup.tar.gz -C test/
 
+<img width="306" height="363" alt="image" src="https://github.com/user-attachments/assets/1822ef13-8882-4b56-816c-ae500df6d0ba" />
 
 
 ## 2. Grep and Pipe
