@@ -76,12 +76,13 @@ Sipuli
 
 #### Sitten palautin tiedostot varmuuskopioista docs-kansioon. Lopuksi tein arkistoinnin ja pakkauksen sekä loin uuden test-kansion johon purin arkiston. 
 
+- cp ../backups/animals.txt .
+- cp ../backups/vegetables.txt .
 - tar -czvf archive/backup.tar.gz backups/
 - mkdir test
 - tar -xzvf archive/backup.tar.gz -C test/
 
 <img width="306" height="363" alt="image" src="https://github.com/user-attachments/assets/1822ef13-8882-4b56-816c-ae500df6d0ba" />
-
 
 ## 2. Grep and Pipe
 
