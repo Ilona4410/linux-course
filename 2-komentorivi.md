@@ -19,6 +19,21 @@ Opin tästä, että kopiointi ja liittäminen ovat VM:lle lisäominaisuuksia, ja
 
 ## 1. Basic Commands 
 
+Tässä tehtävässä loin tehtävänannon mukaisen hakemistorakenteen tiedostoineen & tietoineen. 
+
+Loin ensin uuden kansion kotihakemistoon ja tämän alle kansiot. Loin neljä tiedostoa docs-kansioon. Alla kuva ja käytetyt komennot:
+
+<img width="400" height="235" alt="image" src="https://github.com/user-attachments/assets/54d9fd53-7124-40c1-991e-b1976233b6ce" />
+
+- mkdir practice
+- mkdir practice/docs
+- mkdir practice/images practice/backups practice/archive
+- cd practice/docs
+- touch notes1.txt notes2.txt notes3.txt notes4.txt
+
+
+
+
 ## 2. Grep and Pipe
 
 ## 3. btop
