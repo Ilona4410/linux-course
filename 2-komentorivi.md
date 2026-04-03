@@ -31,6 +31,45 @@ Loin ensin uuden kansion kotihakemistoon ja tämän alle kansiot. Loin neljä ti
 - cd practice/docs
 - touch notes1.txt notes2.txt notes3.txt notes4.txt
 
+Tämän jälkeen muokkasin luotuja tiedostoja lisäämällä näihin 10 eläintä ja 10 hedelmää/vihannesta + nimesin tiedot uudelleen: 
+
+- nano notes1.txt
+- nano notes2.txt
+
+ilona@ilona:~/practice/docs$ mv notes2.txt vegetables.txt
+ilona@ilona:~/practice/docs$ tree
+.
+├── animals.txt
+├── notes3.txt
+├── notes4.txt
+└── vegetables.txt
+
+1 directory, 4 files
+ilona@ilona:~/practice/docs$ cat animals.txt
+Koira
+Kissa
+Hiiri
+Jänis
+Hirvi
+Hamsteri
+Kala
+Karhu
+Delffiini
+Lammas
+ilona@ilona:~/practice/docs$ cat vegetables.txt
+Omena
+Punajuuri
+Banaani
+Peruna
+Mustikka
+Porkkana
+Inkivääri
+Salaatti
+Bataatti
+Sipuli
+
+
+  
 
 
 
