@@ -128,6 +128,32 @@ ilona@ilona:~/practice/docs$ wc -w fruits.txt
 ilona@ilona:~/practice/docs$ wc -c fruits.txt
 30 fruits.txt
 ```
+#### Pipe (|). Tämän avulla voidaan yhdistää komentoja
+
+- cat animals.txt | grep cat = Näyttää tiedoston sisällön ja suodattaa näkyviin rivit joissa sana teksti cat
+- cat animals.txt | wc -l = Näyttää tiedoston ja laskee rivit
+- cat animals.txt | sort | uniq = Näyttää tiedoston, sort muuttaa aakkosjärjestykseen ja uniq poistaa duplikaatit
+
+```
+ilona@ilona:~/practice/docs$ echo -e "dog\ncat\nhorse\ncow\ncatfish" > animals.txt 
+ilona@ilona:~/practice/docs$ cat animals.txt 
+dog
+cat
+horse
+cow
+catfish
+ilona@ilona:~/practice/docs$ cat animals.txt | grep cat 
+cat
+catfish
+ilona@ilona:~/practice/docs$ cat animals.txt | wc -l  
+5
+ilona@ilona:~/practice/docs$ cat animals.txt | sort | uniq 
+cat
+catfish
+cow
+dog
+horse
+```
 
 ## 3. btop
 
