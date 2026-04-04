@@ -86,6 +86,37 @@ Sipuli
 
 ## 2. Grep and Pipe
 
+#### Grep-komennolla voidaan etsiä tekstiä tiedostosta.
+
+- grep apple fruits.txt  = Etsii tiedostosta rivit, joissa sana apple
+- grep -i apple fruits.txt = Optio -i ei ota huomioon isoja ja pieniä kirjaimia
+- grep -n apple fruits.txt = Optio -n näyttää rivin rivin numeron tuloksen edessä
+- grep -ni apple fruits.txt = Kun yhdistetään -n ja -i, ei huomioida kirjainkokoa ja näytetään rivien numerot
+- grep -v apple fruits.txt = Näyttää kaikki rivit, joissa ei olee sanaa apple sen täsmällisessä muodossa
+  
+```
+ilona@ilona:~/practice/docs$ echo -e "apple\nbanana\norange\nApple pie" > fruits.txt
+ilona@ilona:~/practice/docs$ cat fruits.txt 
+apple
+banana
+orange
+Apple pie
+ilona@ilona:~/practice/docs$ grep apple fruits.txt  
+apple
+ilona@ilona:~/practice/docs$ grep -i apple fruits.txt  
+apple
+Apple pie
+ilona@ilona:~/practice/docs$ grep -n apple fruits.txt 
+1:apple
+ilona@ilona:~/practice/docs$ grep -ni apple fruits.txt 
+1:apple
+4:Apple pie
+ilona@ilona:~/practice/docs$ grep -v apple fruits.txt 
+banana
+orange
+Apple pie
+```
+
 ## 3. btop
 
 ## 4. Install Your Own Command-Line Application 
