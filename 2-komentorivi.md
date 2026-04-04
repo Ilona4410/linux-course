@@ -162,6 +162,7 @@ horse
   338 /usr/share/common-licenses/GPL-2
   ```
 - Komennolla grep GNU /usr/share/common-licenses/GPL-2 näytetään kaikki rivit, jotka sisältävät sanan GNU
+  
 - Rivien lukumäärä joissa sana GNU, saadaan yhdistämällä grep, wc ja pipe
   ```
   ilona@ilona:~$ grep GNU /usr/share/common-licenses/GPL-2 | wc -l
@@ -171,7 +172,7 @@ horse
   ```
   ilona@ilona:~$ grep license /usr/share/common-licenses/GPL-2
   ```
-- Jotta edellisestä komennosta saadaan case sensitive ja näkyviin vain joissa sana license pienillä kirjaimilla:
+- Jotta edellisestä komennosta saadaan case sensitive ja näkyviin vain rivit joissa sana license pienillä kirjaimilla:
   ```
   ilona@ilona:~$ grep -i license /usr/share/common-licenses/GPL-2
   ```
