@@ -154,6 +154,32 @@ cow
 dog
 horse
 ```
+#### GPL-2 lisenssin tutkiminen grep-, pipe- ja wc-komennoilla
+
+- Koko tiedostossa on 338 riviä
+  ```
+  ilona@ilona:~$ wc -l /usr/share/common-licenses/GPL-2
+  338 /usr/share/common-licenses/GPL-2
+  ```
+- Komennolla grep GNU /usr/share/common-licenses/GPL-2 näytetään kaikki rivit, jotka sisältävät sanan GNU
+- Rivien lukumäärä joissa sana GNU, saadaan yhdistämällä grep, wc ja pipe
+  ```
+  ilona@ilona:~$ grep GNU /usr/share/common-licenses/GPL-2 | wc -l
+  8
+  ```
+- Kaikki rivit, jotka sisältävät sanan license saadaan komennolla:
+  ```
+  ilona@ilona:~$ grep license /usr/share/common-licenses/GPL-2
+  ```
+- Jotta edellisestä komennosta saadaan case sensitive ja näkyviin vain joissa sana license pienillä kirjaimilla:
+  ```
+  ilona@ilona:~$ grep -i license /usr/share/common-licenses/GPL-2
+  ```
+- Oma kyselyni, jolla selvitin, kuinka monella rivillä mainitaan sana permission pienillä kirjaimilla:
+  ```
+  ilona@ilona:~$ grep -i permission /usr/share/common-licenses/GPL-2 | wc -l
+  4
+  ```
 
 ## 3. btop
 
