@@ -181,6 +181,14 @@ horse
   ilona@ilona:~$ grep -i permission /usr/share/common-licenses/GPL-2 | wc -l
   4
   ```
+#### GPL-2 lisenssin pääkohdat 
+
+- Ohjelmiston käyttö, kopiointi, muokkaus ja jakaminen ovat sallittu
+- Lähdekoodin täytyy kuitenkin olla saatavilla
+- Muokatut versiot täytyy jakaa samalla lisenssillä
+- Lisenssin avulla voidaan varmistaa, että ohjelmisto pysyy avoimena kaikille
+- Ohjelman käyttö tapahtuu aina omalla vastuulla, eikä sille ole takuuta
+  (Free Software Supporter, 2026)
 
 ## 3. btop
 
@@ -191,3 +199,4 @@ horse
 ## Lähteet
 
 - Tech Infokart 24.4.2026. Fix VirtualBox Copy-Paste Not Working: Windows 11 to Ubuntu 24.04 (2026). Video. Katsottavissa: https://www.youtube.com/watch?v=c0Grtq7GAXs. Katsottu: 1.4.2026.
+- GNU Operating System Supported by the Free Software Foundation. GNU General Public License, version 2. Luettavissa: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html. Luettu: 4.4.2026.
