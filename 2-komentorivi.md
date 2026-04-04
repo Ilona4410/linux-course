@@ -67,14 +67,14 @@ Salaatti
 Bataatti
 Sipuli
 ```
-#### Tein tiedostoista varmuuskopiot backups-kansioon ja muokkasin animals.txt-tiedostoa poistamalla eläinten nimiä. Poistin vegetables.txt-tiedoston :
+#### Tein tiedostoista varmuuskopiot backups-kansioon ja muokkasin animals.txt-tiedostoa poistamalla eläinten nimiä. Poistin vegetables.txt-tiedoston:
 
 - cp animals.txt ../backups/
 - cp vegetables.txt ../backups/
 - nano animals.txt (Ctrl + K rivin poisto)
 - rm vegetables.txt
 
-#### Sitten palautin tiedostot varmuuskopioista docs-kansioon. Lopuksi tein arkistoinnin ja pakkauksen sekä loin uuden test-kansion johon purin arkiston. 
+#### Sitten palautin tiedostot varmuuskopioista docs-kansioon. Lopuksi tein arkistoinnin ja pakkauksen sekä loin uuden test-kansion johon purin arkiston
 
 - cp ../backups/animals.txt .
 - cp ../backups/vegetables.txt .
@@ -86,7 +86,7 @@ Sipuli
 
 ## 2. Grep and Pipe
 
-#### Grep-komennolla voidaan etsiä tekstiä tiedostosta.
+#### Grep-komennolla voidaan etsiä tekstiä tiedostosta
 
 - grep apple fruits.txt  = Etsii tiedostosta rivit, joissa sana apple
 - grep -i apple fruits.txt = Optio -i ei ota huomioon isoja ja pieniä kirjaimia
@@ -115,6 +115,18 @@ ilona@ilona:~/practice/docs$ grep -v apple fruits.txt
 banana
 orange
 Apple pie
+```
+#### wc-komennolla voidaan selvittää, kuinka monta riviä, sanaa ja merkkiä tiedosto sitältää
+
+```
+ilona@ilona:~/practice/docs$ wc -l fruits.txt
+4 fruits.txt
+ilona@ilona:~/practice/docs$ wc -w fruits.txt 
+5 fruits.txt
+ilona@ilona:~/practice/docs$ wc -w fruits.txt 
+5 fruits.txt
+ilona@ilona:~/practice/docs$ wc -c fruits.txt
+30 fruits.txt
 ```
 
 ## 3. btop
