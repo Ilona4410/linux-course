@@ -189,7 +189,7 @@ horse
 - Lisenssin avulla voidaan varmistaa, että ohjelmisto pysyy avoimena kaikille
 - Ohjelman käyttö tapahtuu aina omalla vastuulla, eikä sille ole takuuta
   
-(Free Software Supporter, 2026)
+(GNU, 2026)
 
 ## 3. btop
 
