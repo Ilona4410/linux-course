@@ -193,6 +193,21 @@ horse
 
 ## 3. btop
 
+- Btop on työkalu resurssien hallintaan. Se näyttää reaaliaikaisesti mm. CPU:n, muistin ja verkon tilan
+- Asensin ohjelman komennolla sudo apt-get install btop
+- Käynnistin ohjelman komennolla btop
+  
+  <img width="819" height="511" alt="image" src="https://github.com/user-attachments/assets/71629fb0-a1f4-4c60-907c-2dd16a22f06a" />
+  <img width="823" height="519" alt="image" src="https://github.com/user-attachments/assets/2c9c5f57-57c1-4f95-8a73-6266aef8b924" />
+
+- Komento which btop näyttää ohjelman sijainnin
+  ```
+  ilona@ilona:~$ which btop
+  /usr/bin/btop
+  ```
+  
+- Koko järjestelmän asetukset sijaitsevat /etc ja käyttäjäkohtaiset asetukset ~/.config
+
 ## 4. Install Your Own Command-Line Application 
 
 ## Yhteenveto
