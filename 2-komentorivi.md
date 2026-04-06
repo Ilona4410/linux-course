@@ -212,11 +212,41 @@ horse
 
 ### Konfiguraatio
 
+- Komento dpkg -L btop näyttää kaikki btop:in asentamat tiedostot
+- Tein asetustiedostosta varmuuskopion: cp ~/.config/btop/btop.conf ~/.config/btop/btop.conf.orig
+- Muokkasin asetuksia: update_ms (päivitysnopeus), proc_tree = True (prosessinäkymä puurakenteiseksi)
+- Kokeilin tehdä tarkoitksella virheen (proc_tree = Truuuuue). Väärin kirjoitettu asetus ei mennyt läpi, vaan jäi default-asetukseen
+- Tein oman muutoksen config-tiedostossa ja muutin väriteemaa: color_theme = "TTY"
+
+### Load Generation
+
+- Tässä tehtävässä kokeilin kuormittaa CPU:ta ja verkkoa sekä katsoa, mitä btop:ssa näkyy
+- Kun pingasin Googlea (ping -i 0.1 8.8.8.8) huomasin, että network activity kasvoi
+- Kun ajoin komennon yes > /dev/null, CPU nousi korkealle 
+
 ## 4. Install Your Own Command-Line Application 
 
+- Asensin tässä tehtävässä CLI-ohjelman nimeltä htop. Löysin tämän reddit keskustelupalstalta jonka otsikko oli: "What are some CLI apps that someone should not miss when using Linux?"
+- Asensin ohjelman komennolla sudo apt install htop
+  
+<img width="1093" height="685" alt="image" src="https://github.com/user-attachments/assets/4318a02f-1d21-4dca-adb4-4c656a58aa53" />
+
+- Htop:lla voi seurata järjestelmän tilaa ja selvittää ongelmia
+- Kuvassa näkyvä PERCENT_CPU näyttää sen, mikä kuormittaa konetta eniten
+- PERCENT_MEM taas näyttää, mikä käyttää eniten RAM:ia
+- Jos kone käy hitaalla tai jokin toimii muuten huonosti, voi syyn selvittää melko helposti htop:n avulla
+
 ## Yhteenveto
+
+Kurssin toisella viikolla tutustuin komentorivin käyttöön ja peruskomentoihin. Opin liikkumaan hakemistossa ja harjoittelin tiedostojen ja kansioiden hallintaa sekä varmuuskopiointia. Opin myös, mitä grep-, wc- ja pipe-komennoilla voi tehdä. 
+
+Tutustuin myös btop-työkaluun, jonka avulla on mahdollista seurata reaaliajassa resurssien käyttöä. Lisäksin muokkasin ensimmäistä kertaa konfiguraatio-tiedostoa. Latasin myös omavalintaisen CLI-ohjelman ja tutustuin tämän käyttöön. 
+
+Tiivistettynä voisi sanoa, että opin komentorivin käyttöä ja tutustuin kahteen eri ohjelmaan, jolla voidaan hallita ja tarkkailla järjestelmän toimintaa.
 
 ## Lähteet
 
 - Tech Infokart 24.4.2026. Fix VirtualBox Copy-Paste Not Working: Windows 11 to Ubuntu 24.04 (2026). Video. Katsottavissa: https://www.youtube.com/watch?v=c0Grtq7GAXs. Katsottu: 1.4.2026.
 - GNU Operating System Supported by the Free Software Foundation. GNU General Public License, version 2. Luettavissa: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html. Luettu: 4.4.2026.
+- reddit 2021. What are some CLI apps that someone should not miss when using Linux?. Luettavissa: https://www.reddit.com/r/linuxquestions/comments/pghfap/what_are_some_cli_apps_that_someone_should_not/. Luettu: 6.4.2026.
+
