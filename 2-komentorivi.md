@@ -2,6 +2,12 @@
 
 ## Johdanto
 
+Tämän osion tehtävien tarkoituksena oli oppia Linux-järjestelmän peruskäyttöä komentrivin kautta. 
+
+Ennen varsinaisia tehtäviä, esittelen virhetilanteen ja ratkaisun koskien copy-paste -toimintoa virtuaalikoneen ja hostin välillä. 
+
+Tehtävien aikana opin peruskäyttöä ja komentoja, mutta pääsin myös testaamaan ongelmanratkaisua ja vianetsintää ensimmäistä kertaa. 
+
 ## Virhetilanne ja ratkaisu - (copy-paste)
 
 Kurssin ensimmäisellä luennolla kävi ilmi, että minulla sekä muutamalla muulla ei toiminut kopiointi ja liittäminen oman koneen ja VM:n välillä. Päätin korjata tämän ongelman ennen, kuin alan harjoitella komentoja. Opettajan neuvosta varmistin, että Shared Clipboard ja Drag-and-Drop -asetukset ovat Bidirectional. Googlasin ongelmaa ensin hakusanoilla "VirtualBox Guest Additions Debian copy paste not working" ja löysin Tech Infokartin YouTube videon "Fix VirtualBox Copy-Paste Not Working: Windows 11 to Ubuntu 24.04 (2026)". Tämän jälkeen koitin liittää Guest Additions CD Imagen, mutta sain virheilmoituksen, jonka mukaan Debianin ISO-levykuva oli kiinni CD-asemassa. Ratkaisin tämän ChatGPT 5.3 -kielimallin avulla poistamalla ISO-tiedoston virtuaalikoneen asetuksista, jolloin CD-asema vapautui. Tämän jälkeen tuli uusi virhe: "Machine has no optical drives" eli CD-asema ei ollut käytössä, koska se jäi tyhjäksi. Ratkaisin tämän lisäämällä uuden tyhjän CD-aseman Storage-asetuksissa "Add Optical Drive". Tämän jälkeen sain onnistuneesti liitettyä Guest Additions CD Imagen. 
@@ -246,7 +252,8 @@ Tiivistettynä voisi sanoa, että opin komentorivin käyttöä ja tutustuin kaht
 
 ## Lähteet
 
-- Tech Infokart 24.4.2026. Fix VirtualBox Copy-Paste Not Working: Windows 11 to Ubuntu 24.04 (2026). Video. Katsottavissa: https://www.youtube.com/watch?v=c0Grtq7GAXs. Katsottu: 1.4.2026.
 - GNU Operating System Supported by the Free Software Foundation. GNU General Public License, version 2. Luettavissa: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html. Luettu: 4.4.2026.
-- reddit 2021. What are some CLI apps that someone should not miss when using Linux?. Luettavissa: https://www.reddit.com/r/linuxquestions/comments/pghfap/what_are_some_cli_apps_that_someone_should_not/. Luettu: 6.4.2026.
+- Heinonen, J. Linux Commands. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/module_2.md. Luettu: 6.4.2026.
+- Reddit 2021. What are some CLI apps that someone should not miss when using Linux?. Luettavissa: https://www.reddit.com/r/linuxquestions/comments/pghfap/what_are_some_cli_apps_that_someone_should_not/. Luettu: 6.4.2026.
+- Tech Infokart 24.4.2026. Fix VirtualBox Copy-Paste Not Working: Windows 11 to Ubuntu 24.04 (2026). Video. Katsottavissa: https://www.youtube.com/watch?v=c0Grtq7GAXs. Katsottu: 1.4.2026.
 
