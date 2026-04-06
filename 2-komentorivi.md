@@ -2,7 +2,7 @@
 
 ## Johdanto
 
-Tämän osion tehtävien tarkoituksena oli oppia Linux-järjestelmän peruskäyttöä komentrivin kautta. 
+Tämän osion tehtävien tarkoituksena oli oppia Linux-järjestelmän peruskäyttöä komentorivin kautta. 
 
 Ennen varsinaisia tehtäviä, esittelen virhetilanteen ja ratkaisun koskien copy-paste -toimintoa virtuaalikoneen ja hostin välillä. 
 
