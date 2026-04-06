@@ -193,6 +193,8 @@ horse
 
 ## 3. btop
 
+### Asennus
+
 - Btop on työkalu resurssien hallintaan. Se näyttää reaaliaikaisesti mm. CPU:n, muistin ja verkon tilan
 - Asensin ohjelman komennolla sudo apt-get install btop
 - Käynnistin ohjelman komennolla btop
@@ -207,6 +209,8 @@ horse
   ```
   
 - Koko järjestelmän asetukset sijaitsevat /etc ja käyttäjäkohtaiset asetukset ~/.config
+
+### Konfiguraatio
 
 ## 4. Install Your Own Command-Line Application 
 
