@@ -31,8 +31,24 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 <img width="416" height="350" alt="15" src="https://github.com/user-attachments/assets/5a3b90cd-59a1-4a82-b98c-807e4ce43a8c" />
 <img width="517" height="238" alt="16" src="https://github.com/user-attachments/assets/a68d2ce7-9963-496f-98ba-e5fbeaa26a61" />
 
+### Default-sivun muokkaus
+
+#### Muokkasin defaul-sivua komennolla echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html ja päivitin selaimen:
+
+<img width="298" height="231" alt="17" src="https://github.com/user-attachments/assets/05d60487-0ae8-4425-accc-1cac7e647f3d" />
+
+#### echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html
+- echo = kirjoittaa tekstin "This is the default page of my new web server"
+- | (pipe) = yhdistetään komento seuraavaan
+- sudo tee = kirjoittaa tiedostoon admin-oikeuksilla (Panovski 2026)
+- /var/www/html/index.html = tiedosto
+
+
+
 
 
 ## Yhteenveto
 
 ## Lähteet
+
+- Panovski, D. 20.1.2026. Linux Tee Command with Examples. Linuxize. Luettavissa: https://linuxize.com/post/linux-tee-command/. Luettu: 10.4.2026.
