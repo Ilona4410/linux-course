@@ -36,12 +36,17 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 #### Muokkasin defaul-sivua komennolla echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html ja päivitin selaimen:
 
 <img width="298" height="231" alt="17" src="https://github.com/user-attachments/assets/05d60487-0ae8-4425-accc-1cac7e647f3d" />
-
 #### echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html
 - echo = kirjoittaa tekstin "This is the default page of my new web server"
 - | (pipe) = yhdistetään komento seuraavaan
 - sudo tee = kirjoittaa tiedostoon admin-oikeuksilla (Panovski 2026)
 - /var/www/html/index.html = tiedosto
+
+#### Muita tapoja tehtä sama: 
+- nano-tekstieditorilla voidaan muokata tiedostoa = sudo nano /var/www/html/index.html
+- sudo tee /var/www/html/index.html -> tekstin kirjoitus -> Ctrl + D
+
+### /etc/hosts -tiedosto
 
 
 
