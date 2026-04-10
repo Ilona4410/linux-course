@@ -6,7 +6,7 @@
 
 #### Asensin Apache2 web serverin komennolla sudo apt install apache2 ja tarkistin, että tämä toimii normaalisti: 
 
-´´´
+```
 ilona@ilona:~$ sudo systemctl status apache2
 ● apache2.service - The Apache HTTP Server
      Loaded: loaded (/usr/lib/systemd/system/apache2.service; enabled; preset: enabled)
@@ -25,7 +25,7 @@ ilona@ilona:~$ sudo systemctl status apache2
 huhti 10 07:32:58 ilona systemd[1]: Starting apache2.service - The Apache HTTP Server...
 huhti 10 07:32:58 ilona apachectl[2294]: AH00558: apache2: Could not reliably determine the server's >
 huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Server.
-´´´
+```
 #### Seuraavaksi testasin, että selain näyttää Apache default sivun ja culr-komento näyttää tämän HTML-koodina:
 
 <img width="416" height="350" alt="15" src="https://github.com/user-attachments/assets/5a3b90cd-59a1-4a82-b98c-807e4ce43a8c" />
