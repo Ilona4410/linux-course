@@ -6,6 +6,7 @@
 
 #### Asensin Apache2 web serverin komennolla sudo apt install apache2 ja tarkistin, että tämä toimii normaalisti: 
 
+
 ```
 ilona@ilona:~$ sudo systemctl status apache2
 ● apache2.service - The Apache HTTP Server
@@ -26,10 +27,12 @@ huhti 10 07:32:58 ilona systemd[1]: Starting apache2.service - The Apache HTTP S
 huhti 10 07:32:58 ilona apachectl[2294]: AH00558: apache2: Could not reliably determine the server's >
 huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Server.
 ```
+
 #### Seuraavaksi testasin, että selain näyttää Apache default sivun ja culr-komento näyttää tämän HTML-koodina:
 
 <img width="416" height="350" alt="15" src="https://github.com/user-attachments/assets/5a3b90cd-59a1-4a82-b98c-807e4ce43a8c" />
 <img width="517" height="238" alt="16" src="https://github.com/user-attachments/assets/a68d2ce7-9963-496f-98ba-e5fbeaa26a61" />
+
 
 ### Default-sivun muokkaus
 
@@ -55,6 +58,7 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 
 ### Palomuurin asennus ja konffaus
 
+
 ```
 ilona@ilona:~$ sudo ufw status verbose
 Status: active
@@ -71,10 +75,13 @@ To                         Action      From
 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
 443/tcp (v6)               ALLOW IN    Anywhere (v6)  
 ```
+
+
 #### Tein testin sulkemall 80/tcp-portin:
 
 - Sivu avautui silti normaalisti (http://localhost/)
 - Tästä voisi päätellä, että palomuuri ei estä localhostin sisäistä liikennettä
+
 
 ### Oman web-sivun luominen
 
@@ -105,6 +112,7 @@ drwxrwxr-x 2 ilona ilona 4096 11. 4. 14:11 /home/ilona/public-sites
 <img width="267" height="149" alt="21" src="https://github.com/user-attachments/assets/578e8d43-3d39-4287-8104-745ab58e4836" />
 
 5. Tarkistin logit ja kummassakaan ei ollut virheitä
+   
 
 ```
 ilona@ilona:~$ sudo tail -f /var/log/apache2/access.log
@@ -115,6 +123,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
 [Sat Apr 11 13:52:51.988067 2026] [core:notice] [pid 977:tid 977] AH00094: Command line: '/usr/sbin/apa
 ```
 
+
 -> Tästä syystä päätin tehdä pienen virheen config-tiedostoon ja katsoa miten se näkyy logeissa
 
 - Tein typon config-tiedoston Directory-polkuun: Directory /home/ilona/public-sitesss/. Alla kuva mitä sivulla http://site1.com/ näkyi
@@ -124,6 +133,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
   - Virheessä "Require all granted" annetaan kansiolle, jota ei ole olemassa: /home/ilona/public-sitesss/. Tästä syystä Apache estää pääsyn oikealle        polulle
     
 - Alla logit:
+  
     
 ```
 ilona@ilona:~$ sudo tail -f /var/log/apache2/error-site1.log
@@ -133,6 +143,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error-site1.log
 
 - ^Tuossa näkyy ensimmäinen virhe joka liittyi käyttöoikeusongelmaan. Tämä tuli vastaan tuntitehtävässä. Toinen virhe osoittaa suoraan konfig-tiedostoon
 
+
 ```
 ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
 127.0.0.1 - - [10/Apr/2026:08:17:19 +0300] "GET / HTTP/1.1" 403 475 "-" "curl/8.14.1"
@@ -141,6 +152,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
 127.0.0.1 - - [11/Apr/2026:14:55:24 +0300] "GET /favicon.ico HTTP/1.1" 404 527 "http://site1.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
 127.0.0.1 - - [11/Apr/2026:15:09:42 +0300] "GET / HTTP/1.1" 403 531 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
 ```
+
 
 - ^suTuosta taas voidaan nähdä, että ensimmäisellä kerralla en päässyt sivulle (käyttöoikeusongelma), sitten taas pääsin, ja sitten en, koska tein testivirheen config-tiedostoon
     
