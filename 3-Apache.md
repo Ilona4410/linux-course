@@ -37,9 +37,11 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 
 ### Default-sivun muokkaus
 
+
 #### Muokkasin default-sivua komennolla echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html ja päivitin selaimen:
 
 <img width="298" height="231" alt="17" src="https://github.com/user-attachments/assets/05d60487-0ae8-4425-accc-1cac7e647f3d" />
+
 
 #### echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html
 - echo = kirjoittaa tekstin "This is the default page of my new web server"
@@ -47,9 +49,11 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 - sudo tee = kirjoittaa tiedostoon admin-oikeuksilla (Panovski 2026)
 - /var/www/html/index.html = tiedosto
 
+
 #### Muita tapoja tehtä sama: 
 - nano-tekstieditorilla voidaan muokata tiedostoa = sudo nano /var/www/html/index.html
 - sudo tee /var/www/html/index.html -> tekstin kirjoitus -> Ctrl + D
+
 
 ### /etc/hosts -tiedosto
 
@@ -57,6 +61,8 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 #### Muokkasin /etc/hosts -tiedostoa lisäämällä domain-nimen ja IP-osoitteen
 
 <img width="300" height="149" alt="18" src="https://github.com/user-attachments/assets/bc8bd36a-0011-48a0-8400-ae65cb01b764" />
+
+
 
 ### Palomuurin asennus ja konffaus
 
@@ -83,6 +89,7 @@ To                         Action      From
 
 - Sivu avautui silti normaalisti (http://localhost/)
 - Tästä voisi päätellä, että palomuuri ei estä localhostin sisäistä liikennettä
+
 
 
 ### Oman web-sivun luominen
@@ -156,7 +163,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
 ```
 
 
-- ^suTuosta taas voidaan nähdä, että ensimmäisellä kerralla en päässyt sivulle (käyttöoikeusongelma), sitten taas pääsin, ja sitten en, koska tein testivirheen config-tiedostoon
+- ^Tuosta taas voidaan nähdä, että ensimmäisellä kerralla en päässyt sivulle (käyttöoikeusongelma), sitten taas pääsin, ja sitten en, koska tein testivirheen config-tiedostoon
     
 
 
