@@ -114,6 +114,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
 [Sat Apr 11 13:52:51.988044 2026] [mpm_event:notice] [pid 977:tid 977] AH00489: Apache/2.4.66 (Debian) configured -- resuming normal operations
 [Sat Apr 11 13:52:51.988067 2026] [core:notice] [pid 977:tid 977] AH00094: Command line: '/usr/sbin/apa
 ```
+
 -> Tästä syystä päätin tehdä pienen virheen config-tiedostoon ja katsoa miten se näkyy logeissa
 
 - Tein typon config-tiedoston Directory-polkuun: Directory /home/ilona/public-sitesss/. Alla kuva mitä sivulla http://site1.com/ näkyi
@@ -121,7 +122,8 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
   <img width="265" height="155" alt="22" src="https://github.com/user-attachments/assets/53e74881-9cd8-48bd-9f00-dc7883b3bced" />
 
   - Virheessä "Require all granted" annetaan kansiolle, jota ei ole olemassa: /home/ilona/public-sitesss/. Tästä syystä Apache estää pääsyn oikealle        polulle
-  - Alla logit:
+    
+- Alla logit:
     
 ```
 ilona@ilona:~$ sudo tail -f /var/log/apache2/error-site1.log
@@ -129,7 +131,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error-site1.log
 [Sat Apr 11 15:09:42.835482 2026] [authz_core:error] [pid 2922:tid 2936] [client 127.0.0.1:45712] AH01630: client denied by server configuration: /home/ilona/public-sites/
 ```
 
-- Tuossa näkyy ensimmäinen virhe joka liittyi käyttöoikeusongelmaan. Tämä tuli vastaan tuntitehtävässä. Toinen virhe osoittaa suoraan konfig-tiedostoon
+- ^Tuossa näkyy ensimmäinen virhe joka liittyi käyttöoikeusongelmaan. Tämä tuli vastaan tuntitehtävässä. Toinen virhe osoittaa suoraan konfig-tiedostoon
 
 ```
 ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
@@ -140,7 +142,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
 127.0.0.1 - - [11/Apr/2026:15:09:42 +0300] "GET / HTTP/1.1" 403 531 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
 ```
 
-- Tuosta taas voidaan nähdä, että ensimmäisellä kerralla en päässyt sivulle (käyttöoikeusongelma), sitten taas pääsin, ja sitten en, koska tein testivirheen config-tiedostoon
+- ^suTuosta taas voidaan nähdä, että ensimmäisellä kerralla en päässyt sivulle (käyttöoikeusongelma), sitten taas pääsin, ja sitten en, koska tein testivirheen config-tiedostoon
     
 
 
