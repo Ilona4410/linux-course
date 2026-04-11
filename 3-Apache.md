@@ -117,7 +117,18 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
 -> Tästä syystä päätin tehdä pienen virheen config-tiedostoon ja katsoa miten se näkyy logeissa
 
 - Tein typon config-tiedoston Directory-polkuun: Directory /home/ilona/public-sitesss/. Alla kuva mitä sivulla http://site1.com/ näkyi
+  
   <img width="265" height="155" alt="22" src="https://github.com/user-attachments/assets/53e74881-9cd8-48bd-9f00-dc7883b3bced" />
+
+  - Virheessä "Require all granted" annetaan kansiolle, jota ei ole olemassa: /home/ilona/public-sitesss/. Tästä syystä Apache estää pääsyn oikealle        polulle
+  - Alla logit:
+    
+   ```
+   ilona@ilona:~$ sudo tail -f /var/log/apache2/error-site1.log
+[Fri Apr 10 08:17:19.935419 2026] [core:error] [pid 3846:tid 3850] (13)Permission denied: [client 127.0.0.1:43966] AH00035: access to / denied (filesystem path '/home/ilona/public-sites') because search permissions are missing on a component of the path
+[Sat Apr 11 15:09:42.835482 2026] [authz_core:error] [pid 2922:tid 2936] [client 127.0.0.1:45712] AH01630: client denied by server configuration: /home/ilona/public-sites/
+   ```
+    
 
 
  
