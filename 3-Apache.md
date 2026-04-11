@@ -28,6 +28,7 @@ huhti 10 07:32:58 ilona apachectl[2294]: AH00558: apache2: Could not reliably de
 huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Server.
 ```
 
+
 #### Seuraavaksi testasin, että selain näyttää Apache default sivun ja culr-komento näyttää tämän HTML-koodina:
 
 <img width="416" height="350" alt="15" src="https://github.com/user-attachments/assets/5a3b90cd-59a1-4a82-b98c-807e4ce43a8c" />
@@ -51,6 +52,7 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 - sudo tee /var/www/html/index.html -> tekstin kirjoitus -> Ctrl + D
 
 ### /etc/hosts -tiedosto
+
 
 #### Muokkasin /etc/hosts -tiedostoa lisäämällä domain-nimen ja IP-osoitteen
 
