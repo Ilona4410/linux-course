@@ -100,6 +100,21 @@ drwxrwxr-x 2 ilona ilona 4096 11. 4. 14:11 /home/ilona/public-sites
 <img width="418" height="286" alt="20" src="https://github.com/user-attachments/assets/791e5daa-7186-4988-b74e-19d1baf7e73c" />
 <img width="308" height="132" alt="19" src="https://github.com/user-attachments/assets/24d92e28-bc69-4936-b2b8-3e0a67711060" />
 
+4. Tässä valmis sivu:
+
+<img width="267" height="149" alt="21" src="https://github.com/user-attachments/assets/578e8d43-3d39-4287-8104-745ab58e4836" />
+
+5. Tarkistin logit ja kummassakaan ei ollut virheitä
+
+```
+ilona@ilona:~$ sudo tail -f /var/log/apache2/access.log
+[sudo] password for ilona: 
+127.0.0.1 - - [11/Apr/2026:13:55:50 +0300] "GET / HTTP/1.1" 304 248 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
+[Sat Apr 11 13:52:51.988044 2026] [mpm_event:notice] [pid 977:tid 977] AH00489: Apache/2.4.66 (Debian) configured -- resuming normal operations
+[Sat Apr 11 13:52:51.988067 2026] [core:notice] [pid 977:tid 977] AH00094: Command line: '/usr/sbin/apa
+```
+
 
 
 
