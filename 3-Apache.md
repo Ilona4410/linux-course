@@ -71,8 +71,29 @@ To                         Action      From
 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
 443/tcp (v6)               ALLOW IN    Anywhere (v6)  
 ```
+#### Tein testin sulkemall 80/tcp-portin:
 
+- Sivu avautui silti normaalisti (http://localhost/)
+- Tästä voisi päätellä, että palomuuri ei estä localhostin sisäistä liikennettä
 
+### Oman web-sivun luominen
+
+1. Alla luomani HTML-tiedosto:
+
+```
+ilona@ilona:~$ cat ~/public-sites/index.html
+<h1>Moi!</h1>
+<p>Tämä on minun Apache-sivuni.</p>
+```
+
+2. Tarkistin oikeudet. Apachella täytyy olla tiedostooon lukuoikeudet r--, jotta se pystyy lukemaan tiedoston ja näyttämään sivun. Opin tämän tunnilla     tehdystä harjoituksesta. Lisäksi kansiossa täytyy olla -x, jotta Apache pääsee kansioon jossa tiedosto on
+
+```
+ilona@ilona:~$ ls -l ~/public-sites/index.html
+-rw-rw-r-- 1 ilona ilona 38 11. 4. 14:11 /home/ilona/public-sites/index.html
+ilona@ilona:~$ ls -ld ~/public-sites
+drwxrwxr-x 2 ilona ilona 4096 11. 4. 14:11 /home/ilona/public-sites
+```
 
 
 ## Yhteenveto
