@@ -115,7 +115,11 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
 [Sat Apr 11 13:52:51.988067 2026] [core:notice] [pid 977:tid 977] AH00094: Command line: '/usr/sbin/apa
 ```
 -> Tästä syystä päätin tehdä pienen virheen config-tiedostoon ja katsoa miten se näkyy logeissa
-- 
+
+- Tein typon config-tiedoston Directory-polkuun: Directory /home/ilona/public-sitesss/. Alla kuva mitä sivulla http://site1.com/ näkyi
+  <img width="265" height="155" alt="22" src="https://github.com/user-attachments/assets/53e74881-9cd8-48bd-9f00-dc7883b3bced" />
+
+
  
 
 
