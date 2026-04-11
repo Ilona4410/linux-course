@@ -114,7 +114,9 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
 [Sat Apr 11 13:52:51.988044 2026] [mpm_event:notice] [pid 977:tid 977] AH00489: Apache/2.4.66 (Debian) configured -- resuming normal operations
 [Sat Apr 11 13:52:51.988067 2026] [core:notice] [pid 977:tid 977] AH00094: Command line: '/usr/sbin/apa
 ```
-
+-> Tästä syystä päätin tehdä pienen virheen config-tiedostoon ja katsoa miten se näkyy logeissa
+- 
+ 
 
 
 
