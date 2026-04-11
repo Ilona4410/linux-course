@@ -64,6 +64,8 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 
 
 
+
+
 ### Palomuurin asennus ja konffaus
 
 
