@@ -95,6 +95,13 @@ ilona@ilona:~$ ls -ld ~/public-sites
 drwxrwxr-x 2 ilona ilona 4096 11. 4. 14:11 /home/ilona/public-sites
 ```
 
+3. Config-tiedoston luominen. Käytin mallina 000-default.conf-tiedostoa
+   
+<img width="418" height="286" alt="20" src="https://github.com/user-attachments/assets/791e5daa-7186-4988-b74e-19d1baf7e73c" />
+<img width="308" height="132" alt="19" src="https://github.com/user-attachments/assets/24d92e28-bc69-4936-b2b8-3e0a67711060" />
+
+
+
 
 ## Yhteenveto
 
