@@ -123,11 +123,24 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
   - Virheessä "Require all granted" annetaan kansiolle, jota ei ole olemassa: /home/ilona/public-sitesss/. Tästä syystä Apache estää pääsyn oikealle        polulle
   - Alla logit:
     
-   ```
-   ilona@ilona:~$ sudo tail -f /var/log/apache2/error-site1.log
+```
+ilona@ilona:~$ sudo tail -f /var/log/apache2/error-site1.log
 [Fri Apr 10 08:17:19.935419 2026] [core:error] [pid 3846:tid 3850] (13)Permission denied: [client 127.0.0.1:43966] AH00035: access to / denied (filesystem path '/home/ilona/public-sites') because search permissions are missing on a component of the path
 [Sat Apr 11 15:09:42.835482 2026] [authz_core:error] [pid 2922:tid 2936] [client 127.0.0.1:45712] AH01630: client denied by server configuration: /home/ilona/public-sites/
-   ```
+```
+
+- Tuossa näkyy ensimmäinen virhe joka liittyi käyttöoikeusongelmaan. Tämä tuli vastaan tuntitehtävässä. Toinen virhe osoittaa suoraan konfig-tiedostoon
+
+```
+ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
+127.0.0.1 - - [10/Apr/2026:08:17:19 +0300] "GET / HTTP/1.1" 403 475 "-" "curl/8.14.1"
+127.0.0.1 - - [10/Apr/2026:08:20:12 +0300] "GET / HTTP/1.1" 200 279 "-" "curl/8.14.1"
+127.0.0.1 - - [11/Apr/2026:14:55:24 +0300] "GET / HTTP/1.1" 200 321 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+127.0.0.1 - - [11/Apr/2026:14:55:24 +0300] "GET /favicon.ico HTTP/1.1" 404 527 "http://site1.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+127.0.0.1 - - [11/Apr/2026:15:09:42 +0300] "GET / HTTP/1.1" 403 531 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+```
+
+- Tuosta taas voidaan nähdä, että ensimmäisellä kerralla en päässyt sivulle (käyttöoikeusongelma), sitten taas pääsin, ja sitten en, koska tein testivirheen config-tiedostoon
     
 
 
