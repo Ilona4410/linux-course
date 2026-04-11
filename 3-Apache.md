@@ -49,6 +49,28 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 
 ### /etc/hosts -tiedosto
 
+#### Muokkasin /etc/hosts -tiedostoa lisäämällä domain-nimen ja IP-osoitteen
+
+<img width="300" height="149" alt="18" src="https://github.com/user-attachments/assets/bc8bd36a-0011-48a0-8400-ae65cb01b764" />
+
+### Palomuurin asennus ja konffaus
+
+```
+ilona@ilona:~$ sudo ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere                  
+80/tcp                     ALLOW IN    Anywhere                  
+443/tcp                    ALLOW IN    Anywhere                  
+22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+443/tcp (v6)               ALLOW IN    Anywhere (v6)  
+```
 
 
 
