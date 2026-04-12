@@ -166,10 +166,42 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
 
 
 - ^Tuosta taas voidaan nähdä, että ensimmäisellä kerralla en päässyt sivulle (käyttöoikeusongelma), sitten taas pääsin, ja sitten en, koska tein testivirheen config-tiedostoon
-    
 
 
- 
+### Challenge!
+
+- Viimeisessä osassa tein toisen sivun site2.com, joka käyttää samaa IP-osoitetta (127.0.0.1), kuin aikaisemmin luotu sivu site1.com
+- Ideana oli, että Apache erottaa sivut domain-nimen perusteella
+
+
+1. Lisäsin toisen domainin /etc/hosts-tiedostoon
+
+
+```
+ilona@ilona:~$ cat /etc/hosts
+# Standard host addresses
+127.0.0.1  localhost
+::1        localhost ip6-localhost ip6-loopback
+ff02::1    ip6-allnodes
+ff02::2    ip6-allrouters
+# This host address
+127.0.1.1  ilona
+127.0.0.1  site1.com
+127.0.0.1  www.site1.com
+127.0.0.1  site2.com
+127.0.0.1 www.site2.com
+```
+
+
+2. Loin tosta sivua varten uuden kansion kotihakemistoon ja loin toisen HTML-tiedoston
+
+
+<img width="371" height="148" alt="23" src="https://github.com/user-attachments/assets/87646579-b1d3-49a0-9847-176635bbc4fb" />
+
+
+3. 
+
+
 
 
 
