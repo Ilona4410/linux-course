@@ -274,7 +274,12 @@ ilona@ilona:~/public-sites2$ sudo tail -f /var/log/apache2/error-site2.log
 
 
 
-
+```markdown
+Steps:
+- Install Apache
+- Configure /etc/hosts
+- Create VirtualHost
+- Test the site
 
 
 
