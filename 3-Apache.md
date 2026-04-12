@@ -199,7 +199,80 @@ ff02::2    ip6-allrouters
 <img width="371" height="148" alt="23" src="https://github.com/user-attachments/assets/87646579-b1d3-49a0-9847-176635bbc4fb" />
 
 
-3. 
+3. Sitten tarkistin oikeudet
+
+
+```
+ilona@ilona:~/public-sites2$ ls -ld ~
+drwx-----x 18 ilona ilona 4096 12. 4. 15:41 /home/ilona
+ilona@ilona:~/public-sites2$ ls -ld ~/public-sites2
+drwxrwxr-x 2 ilona ilona 4096 12. 4. 15:44 /home/ilona/public-sites2
+ilona@ilona:~/public-sites2$ ls -l ~/public-sites2/index.html
+-rw-rw-r-- 1 ilona ilona 65 12. 4. 15:44 /home/ilona/public-sites2/index.html
+```
+
+
+4. Tein toiselle sivulle oman config-tiedoston ja aktivoin uuden sivun
+
+```
+ilona@ilona:~/public-sites2$ cat /etc/apache2/sites-available/site2.com.conf
+<VirtualHost *:80>
+    ServerName site2.com
+    ServerAlias www.site2.com
+
+    ServerAdmin webmaster@localhost
+    DocumentRoot /home/ilona/public-sites2
+
+    <Directory /home/ilona/public-sites2>
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error-site2.log
+    CustomLog ${APACHE_LOG_DIR}/access-site2.log combined
+</VirtualHost>
+ilona@ilona:~/public-sites2$ sudo a2ensite site2.com.conf
+Enabling site site2.com.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+ilona@ilona:~/public-sites2$ systemctl reload apache2
+```
+
+
+5. Sivujen site2.com ja site1.com testaus
+
+<img width="341" height="100" alt="24" src="https://github.com/user-attachments/assets/72b65d23-2753-4298-ba83-3c3bfd4dc1dc" />
+<img width="261" height="107" alt="25" src="https://github.com/user-attachments/assets/16569918-89a3-4479-b4ff-fab1865d210f" />
+
+6. Tarkistin, että molemmat virtualhostit ovat käytössä
+
+
+```
+ilona@ilona:~/public-sites2$ ls /etc/apache2/sites-enabled/
+000-default.conf  site1.com.conf  site2.com.conf
+ilona@ilona:~/public-sites2$ 
+```
+
+
+7. Logien tarkistus
+
+
+```
+ilona@ilona:~/public-sites2$ sudo tail -f /var/log/apache2/access-site2.log
+127.0.0.1 - - [12/Apr/2026:16:01:18 +0300] "GET / HTTP/1.1" 200 348 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+127.0.0.1 - - [12/Apr/2026:16:01:19 +0300] "GET /favicon.ico HTTP/1.1" 404 527 "http://site2.com/" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+127.0.0.1 - - [12/Apr/2026:16:03:05 +0300] "GET / HTTP/1.1" 304 248 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+127.0.0.1 - - [12/Apr/2026:16:04:32 +0300] "GET / HTTP/1.1" 304 248 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+127.0.0.1 - - [12/Apr/2026:16:09:02 +0300] "GET / HTTP/1.1" 304 248 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+127.0.0.1 - - [12/Apr/2026:16:09:03 +0300] "GET / HTTP/1.1" 304 247 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+^C
+ilona@ilona:~/public-sites2$ sudo tail -f /var/log/apache2/error-site2.log
+^C
+```
+     - Noista voidaan nähdä, että site2.com toimi oikein ja error-logi oli kokonaan tyhjä, eli ei virheitä
+
+
+
+
 
 
 
