@@ -4,7 +4,7 @@
 
 ## Asennus
 
-## Asensin Apache2 web serverin komennolla sudo apt install apache2 ja tarkistin, että tämä toimii normaalisti:##
+**Asensin Apache2 web serverin komennolla sudo apt install apache2 ja tarkistin, että tämä toimii normaalisti:**
 
 
 ```
