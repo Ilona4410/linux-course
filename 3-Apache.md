@@ -4,7 +4,7 @@
 
 ## Asennus
 
-**Asensin Apache2 web serverin komennolla sudo apt install apache2 ja tarkistin, että tämä toimii normaalisti:**
+**- Asensin Apache2 web serverin komennolla sudo apt install apache2 ja tarkistin, että tämä toimii normaalisti:**
 
 
 ```
@@ -29,36 +29,36 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 ```
 
 
-#### Seuraavaksi testasin, että selain näyttää Apache default sivun ja culr-komento näyttää tämän HTML-koodina:
+**- Seuraavaksi testasin, että selain näyttää Apache default sivun ja culr-komento näyttää tämän HTML-koodina:**
 
 <img width="416" height="350" alt="15" src="https://github.com/user-attachments/assets/5a3b90cd-59a1-4a82-b98c-807e4ce43a8c" />
 <img width="517" height="238" alt="16" src="https://github.com/user-attachments/assets/a68d2ce7-9963-496f-98ba-e5fbeaa26a61" />
 
 
-### Default-sivun muokkaus
+## Default-sivun muokkaus
 
 
-#### Muokkasin default-sivua komennolla echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html ja päivitin selaimen:
+**- Muokkasin default-sivua komennolla echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html ja päivitin selaimen:**
 
 <img width="298" height="231" alt="17" src="https://github.com/user-attachments/assets/05d60487-0ae8-4425-accc-1cac7e647f3d" />
 
 
-#### echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html
+**- echo "This is the default page of my new web server" | sudo tee /var/www/html/index.html**
 - echo = kirjoittaa tekstin "This is the default page of my new web server"
 - | (pipe) = yhdistetään komento seuraavaan
 - sudo tee = kirjoittaa tiedostoon admin-oikeuksilla (Panovski 2026)
 - /var/www/html/index.html = tiedosto
 
 
-#### Muita tapoja tehtä sama: 
+**- Muita tapoja tehtä sama:**
 - nano-tekstieditorilla voidaan muokata tiedostoa = sudo nano /var/www/html/index.html
 - sudo tee /var/www/html/index.html -> tekstin kirjoitus -> Ctrl + D
 
 
-### /etc/hosts -tiedosto
+## /etc/hosts -tiedosto
 
 
-#### Muokkasin /etc/hosts -tiedostoa lisäämällä domain-nimen ja IP-osoitteen
+**- Muokkasin /etc/hosts -tiedostoa lisäämällä domain-nimen ja IP-osoitteen**
 
 <img width="300" height="149" alt="18" src="https://github.com/user-attachments/assets/bc8bd36a-0011-48a0-8400-ae65cb01b764" />
 
@@ -66,7 +66,7 @@ huhti 10 07:32:58 ilona systemd[1]: Started apache2.service - The Apache HTTP Se
 
 
 
-### Palomuurin asennus ja konffaus
+## Palomuurin asennus ja konffaus
 
 
 ```
@@ -87,16 +87,16 @@ To                         Action      From
 ```
 
 
-#### Tein testin sulkemall 80/tcp-portin:
+**- Tein testin sulkemall 80/tcp-portin:**
 
 - Sivu avautui silti normaalisti (http://localhost/)
 - Tästä voisi päätellä, että palomuuri ei estä localhostin sisäistä liikennettä
 
 
 
-### Oman web-sivun luominen
+## Oman web-sivun luominen
 
-1. Alla luomani HTML-tiedosto:
+**1. Alla luomani HTML-tiedosto:**
 
 ```
 ilona@ilona:~$ cat ~/public-sites/index.html
@@ -104,7 +104,7 @@ ilona@ilona:~$ cat ~/public-sites/index.html
 <p>Tämä on minun Apache-sivuni.</p>
 ```
 
-2. Tarkistin oikeudet. Apachella täytyy olla tiedostooon lukuoikeudet r--, jotta se pystyy lukemaan tiedoston ja näyttämään sivun. Opin tämän tunnilla     tehdystä harjoituksesta. Lisäksi kansiossa täytyy olla -x, jotta Apache pääsee kansioon jossa tiedosto on
+**2. Tarkistin oikeudet. Apachella täytyy olla tiedostooon lukuoikeudet r--, jotta se pystyy lukemaan tiedoston ja näyttämään sivun. Opin tämän tunnilla     tehdystä harjoituksesta. Lisäksi kansiossa täytyy olla -x, jotta Apache pääsee kansioon jossa tiedosto on**
 
 ```
 ilona@ilona:~$ ls -l ~/public-sites/index.html
@@ -113,16 +113,16 @@ ilona@ilona:~$ ls -ld ~/public-sites
 drwxrwxr-x 2 ilona ilona 4096 11. 4. 14:11 /home/ilona/public-sites
 ```
 
-3. Config-tiedoston luominen. Käytin mallina 000-default.conf-tiedostoa
+**3. Config-tiedoston luominen. Käytin mallina 000-default.conf-tiedostoa**
    
 <img width="418" height="286" alt="20" src="https://github.com/user-attachments/assets/791e5daa-7186-4988-b74e-19d1baf7e73c" />
 <img width="308" height="132" alt="19" src="https://github.com/user-attachments/assets/24d92e28-bc69-4936-b2b8-3e0a67711060" />
 
-4. Tässä valmis sivu:
+**4. Tässä valmis sivu:**
 
 <img width="267" height="149" alt="21" src="https://github.com/user-attachments/assets/578e8d43-3d39-4287-8104-745ab58e4836" />
 
-5. Tarkistin logit ja kummassakaan ei ollut virheitä
+**5. Tarkistin logit ja kummassakaan ei ollut virheitä**
    
 
 ```
@@ -143,7 +143,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
 
   - Virheessä "Require all granted" annetaan kansiolle, jota ei ole olemassa: /home/ilona/public-sitesss/. Tästä syystä Apache estää pääsyn oikealle        polulle
     
-- Alla logit:
+**- Alla logit:**
   
     
 ```
@@ -174,7 +174,7 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/access-site1.log
 - Ideana oli, että Apache erottaa sivut domain-nimen perusteella
 
 
-1. Lisäsin toisen domainin /etc/hosts-tiedostoon
+**1. Lisäsin toisen domainin /etc/hosts-tiedostoon**
 
 
 ```
@@ -193,13 +193,13 @@ ff02::2    ip6-allrouters
 ```
 
 
-2. Loin tosta sivua varten uuden kansion kotihakemistoon ja loin toisen HTML-tiedoston
+**2. Loin tosta sivua varten uuden kansion kotihakemistoon ja loin toisen HTML-tiedoston**
 
 
 <img width="371" height="148" alt="23" src="https://github.com/user-attachments/assets/87646579-b1d3-49a0-9847-176635bbc4fb" />
 
 
-3. Sitten tarkistin oikeudet
+**3. Sitten tarkistin oikeudet**
 
 
 ```
@@ -212,7 +212,7 @@ ilona@ilona:~/public-sites2$ ls -l ~/public-sites2/index.html
 ```
 
 
-4. Tein toiselle sivulle oman config-tiedoston ja aktivoin uuden sivun
+**4. Tein toiselle sivulle oman config-tiedoston ja aktivoin uuden sivun**
 
 ```
 ilona@ilona:~/public-sites2$ cat /etc/apache2/sites-available/site2.com.conf
@@ -238,12 +238,12 @@ ilona@ilona:~/public-sites2$ systemctl reload apache2
 ```
 
 
-5. Sivujen site2.com ja site1.com testaus
+**5. Sivujen site2.com ja site1.com testaus**
 
 <img width="341" height="100" alt="24" src="https://github.com/user-attachments/assets/72b65d23-2753-4298-ba83-3c3bfd4dc1dc" />
 <img width="261" height="107" alt="25" src="https://github.com/user-attachments/assets/16569918-89a3-4479-b4ff-fab1865d210f" />
 
-6. Tarkistin, että molemmat virtualhostit ovat käytössä
+**6. Tarkistin, että molemmat virtualhostit ovat käytössä**
 
 
 ```
@@ -253,7 +253,7 @@ ilona@ilona:~/public-sites2$
 ```
 
 
-7. Logien tarkistus
+**7. Logien tarkistus**
 
 
 ```
@@ -268,18 +268,12 @@ ilona@ilona:~/public-sites2$ sudo tail -f /var/log/apache2/access-site2.log
 ilona@ilona:~/public-sites2$ sudo tail -f /var/log/apache2/error-site2.log
 ^C
 ```
-     - Noista voidaan nähdä, että site2.com toimi oikein ja error-logi oli kokonaan tyhjä, eli ei virheitä
+
+ - Noista voidaan nähdä, että site2.com toimi oikein ja error-logi oli kokonaan tyhjä, eli ei virheitä
 
 
 
 
-
-```markdown
-Steps:
-- Install Apache
-- Configure /etc/hosts
-- Create VirtualHost
-- Test the site
 
 
 
