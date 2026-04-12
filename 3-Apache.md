@@ -2,6 +2,8 @@
 
 ## Johdanto
 
+Tämän osion tarkoituksena oli tutustua Apache2 web serveriin. Tavoitteena oli ymmärtää ja luoda virtual host -ratkaisu, jossa useita verkkosivuja voidaan käyttää samalla localhost IP-osoitteella. Tarkoituksena oli myös oppia tarkastelemaan lokitietoja ja testata palvelimen toimintaa omien web-sivujen avulla. Lisäksi tehtäviin kuului palomuurin asennus ja konffaus sekä oikeuksien määrittely. 
+
 ## Asennus
 
 **- Asensin Apache2 web serverin komennolla sudo apt install apache2 ja tarkistin, että tämä toimii normaalisti:**
@@ -122,7 +124,7 @@ drwxrwxr-x 2 ilona ilona 4096 11. 4. 14:11 /home/ilona/public-sites
 
 <img width="267" height="149" alt="21" src="https://github.com/user-attachments/assets/578e8d43-3d39-4287-8104-745ab58e4836" />
 
-**5. Tarkistin logit ja kummassakaan ei ollut virheitä**
+**5. Tarkistin lokit ja kummassakaan ei ollut virheitä**
    
 
 ```
@@ -135,15 +137,15 @@ ilona@ilona:~$ sudo tail -f /var/log/apache2/error.log
 ```
 
 
--> Tästä syystä päätin tehdä pienen virheen config-tiedostoon ja katsoa miten se näkyy logeissa
+-> Tästä syystä päätin tehdä pienen virheen config-tiedostoon ja katsoa miten se näkyy lokeissa
 
 - Tein typon config-tiedoston Directory-polkuun: Directory /home/ilona/public-sitesss/. Alla kuva mitä sivulla http://site1.com/ näkyi
   
   <img width="265" height="155" alt="22" src="https://github.com/user-attachments/assets/53e74881-9cd8-48bd-9f00-dc7883b3bced" />
 
-  - Virheessä "Require all granted" annetaan kansiolle, jota ei ole olemassa: /home/ilona/public-sitesss/. Tästä syystä Apache estää pääsyn oikealle        polulle
+  - Virheessä "Require all granted" annetaan kansiolle, jota ei ole olemassa: /home/ilona/public-sitesss/. Tästä syystä Apache estää pääsyn oikealle polulle
     
-**- Alla logit:**
+**- Alla lokit:**
   
     
 ```
@@ -253,7 +255,7 @@ ilona@ilona:~/public-sites2$
 ```
 
 
-**7. Logien tarkistus**
+**7. Lokien tarkistus**
 
 
 ```
@@ -269,16 +271,20 @@ ilona@ilona:~/public-sites2$ sudo tail -f /var/log/apache2/error-site2.log
 ^C
 ```
 
- - Noista voidaan nähdä, että site2.com toimi oikein ja error-logi oli kokonaan tyhjä, eli ei virheitä
-
-
-
-
-
+ - Noista voidaan nähdä, että site2.com toimi oikein ja error-loki oli kokonaan tyhjä, eli ei virheitä
 
 
 ## Yhteenveto
 
+- Opin asentamaan Apache2 web serverin ja konfiguroimaan virtualhost-tiedostoa. Ymmärsin, että tämä conf-tiedosto ns. kertoo palvelimelle, mitä sivua näytetään ja mistä hakemistosta
+- Opin myös /etc/hosts -tiedostosta: Tämä toimii vähän niin kuin DNS-palvelin, eli muuttaa esim site1.com IP-osoitteeksi 127.0.0.1 -> näin selain tietää mihin ottaa yhteys
+- Oikeudet ja niiden määrittely avautui myös ihan hyvin. Näihin tutustuin enemmän tuntiharjoituksessa. Näiden kanssa minulla tuli yksi virhetilanne ja ehkä siksi tuntuukin, että opin näistä parhaiten
+- Access- ja error -lokit tulivat tutuiksi ja pystyn tulkitsemaan näitä ainakin jotenkin
+- Palomuuri (ufw) tuli nyt myös tutummaksi, erityisesti yhden portin kieltäminen lisäsi ymmärrystä localhostin käyttäytymisestä
+
+Kokonaisuudessaan onnistuin suorittamaan tehtävät onnistuneesti. Tehtävien jälkeen koen, että minulla on perusymmärrys Apache2 serverin toiminnasta, virtualhost-tiedostosta sekä lokien ja käyttöoikeuksien merkityksestä.
+
 ## Lähteet
 
+- Heinonen, J. 2026. Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/module_3.md. Luettu: 10.4.2026.
 - Panovski, D. 20.1.2026. Linux Tee Command with Examples. Linuxize. Luettavissa: https://linuxize.com/post/linux-tee-command/. Luettu: 10.4.2026.
