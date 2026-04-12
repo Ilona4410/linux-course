@@ -89,7 +89,7 @@ To                         Action      From
 ```
 
 
-**- Tein testin sulkemall 80/tcp-portin:**
+**- Tein testin sulkemalla 80/tcp-portin:**
 
 - Sivu avautui silti normaalisti (http://localhost/)
 - Tästä voisi päätellä, että palomuuri ei estä localhostin sisäistä liikennettä
