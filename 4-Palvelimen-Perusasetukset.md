@@ -74,6 +74,29 @@
   Rules updated (v6)
   ```
 
+- Palomuurin käyttöönotto ja tilan tarkistus:
+
+
+  ```
+  linuxuser@test026:~$ sudo ufw enable
+  Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+  Firewall is active and enabled on system startup
+  linuxuser@test026:~$ sudo ufw status verbose
+  Status: active
+  Logging: on (low)
+  Default: deny (incoming), allow (outgoing), disabled (routed)
+  New profiles: skip
+  
+  To                         Action      From
+  --                         ------      ----
+  22/tcp                     ALLOW IN    Anywhere                  
+  80/tcp                     ALLOW IN    Anywhere                  
+  443/tcp                    ALLOW IN    Anywhere                  
+  22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+  80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+  443/tcp (v6)               ALLOW IN    Anywhere (v6)   
+  ```
+
 
   
 
