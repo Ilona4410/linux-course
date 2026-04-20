@@ -58,6 +58,24 @@
   drwxrwxr-x 2 linuxuser linuxuser 4096 Apr 20 12:37 /home/linuxuser/public-sites
   ```
 
+## UFW:n asennus
+
+- Asennus komennolla sudo apt install ufw
+- SSH:n salliminen komennolla sudo ufw allow 22/tcp. Ilman tätä menettäisin SSH-yhteyden
+- Sallin HTTP ja HTTPS:
+
+
+  ```
+  linuxuser@test026:~$ sudo ufw allow 80/tcp
+  Rules updated
+  Rules updated (v6)
+  linuxuser@test026:~$ sudo ufw allow 443/tcp
+  Rules updated
+  Rules updated (v6)
+  ```
+
+
+  
 
 
 
