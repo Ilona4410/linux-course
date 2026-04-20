@@ -12,7 +12,7 @@
 
   ```
   linuxuser@test026:~$ sudo apt upgrade
-Summary:                        
+  Summary:                        
   Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
   ```
 
