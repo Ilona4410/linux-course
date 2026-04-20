@@ -37,10 +37,6 @@
 
   <img width="440" height="181" alt="26" src="https://github.com/user-attachments/assets/6340d1eb-f5b1-4b9c-be65-f1610e5a8a9b" />
 
-- ip a -komento:
-
-
-  <img width="440" height="155" alt="27" src="https://github.com/user-attachments/assets/326226a7-e397-4c87-b8e2-af6039ec01bd" />
 
  - Testit:
 
@@ -96,6 +92,64 @@
   80/tcp (v6)                ALLOW IN    Anywhere (v6)             
   443/tcp (v6)               ALLOW IN    Anywhere (v6)   
   ```
+
+## Networking
+
+- Komento ip a näyttää localhostin, verkkokortin, IP-osoitteen ja broadcast-osoitteen. Ei näytä julkista osoitettani:
+
+
+  <img width="440" height="155" alt="27" src="https://github.com/user-attachments/assets/326226a7-e397-4c87-b8e2-af6039ec01bd" />
+
+**Packet inspection**
+
+- Ngrep asennus komennolla sudo apt install ngrep
+
+**HTTP-liikenteen kuuntelu**
+
+- Komento sudo ngrep -d eth0 -W byline "" port 80
+- Toisessa terminaalissa komento curl http://localhost
+
+
+  <img width="439" height="268" alt="31" src="https://github.com/user-attachments/assets/393f4423-b2a5-40f2-a516-0257eb60c27e" />
+
+- Viesteissä näkyy GET request, HTTP response (200 OK) ja headers (Host, User-Agent)
+- HTTP-liikenne ei ole salattua
+- Osa liikenteestä oli jotain taustaliikennettä, ei liittynyt toisen terminaalin komentooni
+
+**SSH-liikenteen kuuntelu**
+
+- Komento sudo ngrep -d eth0 -W byline "" port 22
+- Toisessa terminaalissa komento ssh localhost
+- Terminaalissa jossa kuuntelen liikennettä, vilisee merkkejä, ei näy mitään. SSH-liikenne on salattua
+
+
+  <img width="429" height="236" alt="32" src="https://github.com/user-attachments/assets/7c2864ce-74d2-44b8-8d4e-3bac0a7679d6" />
+
+**Ping-kuuntelu**
+
+- Toisessa terminaalissa komento sudo ngrep -d eth0 -W byline "" icmp
+- Toisesssa ping 8.8.8.8
+
+
+  <img width="314" height="207" alt="33" src="https://github.com/user-attachments/assets/f95ee87b-6f77-4601-b89f-429626e2691f" />
+
+- Tuloksessa näkyy ICMP-paketteja omalta VM:ltäni kohti Googlen osoitetta 8.8.8.8 sekä vastauksia takaisin
+
+**Tcpdump**
+
+- Toisessa terminaalissa komento sudo tcpdump -i eth0 icmp
+- Toisessa ping 8.8.8.8
+
+
+  <img width="423" height="106" alt="34" src="https://github.com/user-attachments/assets/c828b4f3-7e7d-41f3-b46f-8705f1eba607" />
+
+- Tcpdump näyttää IP:t ja protokollat. Näyttää pakettien tiedot tarkemmin
+
+
+
+  
+
+
 
 
   
