@@ -50,8 +50,8 @@ linuxuser@test026:~$ sudo systemctl status ssh
 - Apache2 toimii, näkyy näkyy active (running):
 
 
-   ```
-   linuxuser@test026:~$ sudo systemctl status apache2
+  ```
+  linuxuser@test026:~$ sudo systemctl status apache2
 ● apache2.service - The Apache HTTP Server
      Loaded: loaded (/usr/lib/systemd/system/apache2.service; enabled; preset: enabled)
      Active: active (running) since Mon 2026-04-20 12:09:50 UTC; 1min 34s ago
@@ -65,7 +65,10 @@ linuxuser@test026:~$ sudo systemctl status ssh
              ├─65131 /usr/sbin/apache2 -k start
              ├─65132 /usr/sbin/apache2 -k start
              └─65162 /usr/sbin/apache2 -k start
-   ```
+  ```
+
+
+
 
 
 
