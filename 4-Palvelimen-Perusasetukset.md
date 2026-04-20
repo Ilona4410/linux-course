@@ -2,6 +2,10 @@
 
 ## Johdanto
 
+Tämän osion tarkoituksena oli tutustua Linuxin konfigurointiin etäpalvelimella (Azure VM). 
+
+Tavoitteena oli muodostaa SSH-yhteys palvelimeen, ottaa käyttöön avainkirjautuminen, asentaa Apache ja konfiguroida palomuuri. Lisäksi tavoitteena oli ymmärtää verkkoliikenteen analysointiin tarkoitettuja työkaluja. 
+
 ## Järjestelmän päivitys ja salasananvaihto
 
 - Kirjauduin etäpalvelimelle (Azure VM) komennolla ssh linuxuser@65.52.72.83
@@ -146,30 +150,8 @@
 - Tcpdump näyttää IP:t ja protokollat. Näyttää pakettien tiedot tarkemmin
 
 
-
-  
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
 ## Yhteenveto
+
+Onnistuin suorittamaan harjoituksen kaikki perustehtävät. Jätin Challenge-osion tällä kertaa pois. Opin käyttämään SSH-yhteyttä ja tarkastelemaan verkkoyhteyttä eri tekniikoilla. Apache-palvelinen asennus ja palomuurin konffaus oli hyvää kertausta. 
 
 ## Lähteet
