@@ -42,10 +42,18 @@
 
   <img width="440" height="155" alt="27" src="https://github.com/user-attachments/assets/326226a7-e397-4c87-b8e2-af6039ec01bd" />
 
-  - Testit:
+ - Testit:
 
 
-    <img width="437" height="259" alt="28" src="https://github.com/user-attachments/assets/2896c6f5-0031-4ec4-a3f2-0d3fa1ff13e5" />
+   <img width="472" height="347" alt="29" src="https://github.com/user-attachments/assets/ec9ad74e-2810-4544-ab91-1200e6da3d72" />
+   <img width="438" height="185" alt="30" src="https://github.com/user-attachments/assets/52288ab7-2646-4491-a7bd-a8b487e18cac" />
+
+
+
+
+
+
+  
 
 
 
