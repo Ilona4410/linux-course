@@ -155,3 +155,5 @@ Tavoitteena oli muodostaa SSH-yhteys palvelimeen, ottaa käyttöön avainkirjaut
 Onnistuin suorittamaan harjoituksen kaikki perustehtävät. Jätin Challenge-osion tällä kertaa pois. Opin käyttämään SSH-yhteyttä ja tarkastelemaan verkkoyhteyttä eri tekniikoilla. Apache-palvelinen asennus ja palomuurin konffaus oli hyvää kertausta. 
 
 ## Lähteet
+
+- Heinonen, J. 2026. Linux Exercises – Module 4 (Basic Configuration). Luettavissa: https://hhmoodle.haaga-helia.fi/pluginfile.php/4696913/mod_resource/content/3/mod4_exercises_basic_config.pdf. Luettu: 20.4.2026.
