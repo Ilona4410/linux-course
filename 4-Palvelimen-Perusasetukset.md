@@ -49,6 +49,16 @@
    <img width="438" height="185" alt="30" src="https://github.com/user-attachments/assets/52288ab7-2646-4491-a7bd-a8b487e18cac" />
 
 
+- Loin hakemiston ja tarkistin oikeudet:
+
+
+  ```
+  linuxuser@test026:~$ mkdir -p /home/linuxuser/public-sites
+  linuxuser@test026:~$ ls -ld /home/linuxuser/public-sites
+  drwxrwxr-x 2 linuxuser linuxuser 4096 Apr 20 12:37 /home/linuxuser/public-sites
+  ```
+
+
 
 
 
