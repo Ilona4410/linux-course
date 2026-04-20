@@ -1,7 +1,7 @@
 # Palvelimen perusasetukset
 
-# Johdanto
+## Johdanto
 
-# Yhteenveto
+## Yhteenveto
 
-# Lähteet
+## Lähteet
