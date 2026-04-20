@@ -35,7 +35,7 @@ linuxuser@test026:~$ sudo systemctl status ssh
         CPU: 6min 39.767s
      CGroup: /system.slice/ssh.service
              └─10732 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
- ``` 
+   ``` 
 
 ## SSH-avainkirjautuminen
 
