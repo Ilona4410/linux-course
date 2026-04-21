@@ -20,11 +20,6 @@ Tavoitteena oli muodostaa SSH-yhteys palvelimeen, ottaa käyttöön avainkirjaut
   Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
   ```
 
-## SSH-serveri
-
-- SSH-serveri toimii, näkyy active (running):
-
-
 
 ## SSH-avainkirjautuminen
 
