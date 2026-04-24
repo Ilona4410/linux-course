@@ -74,7 +74,7 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
     - chmod o+x /home/linuxuser = pääsy myös ylempiin kansioihin
       -> Sain luotua tiedoston ja kirjoitettua tähän sudo -u edituser nano /home/linuxuser/public-sites/editorfile.txt
 
- - Sain komennolla **curl http://test026.linuxkurssi.xyz/** index.html-tiedoston auki, eli tiedoston nimeä ei tarvittu, koska Apache haki tämän automaattisesti
+ - Sain komennolla ```curl http://test026.linuxkurssi.xyz/``` index.html-tiedoston auki, eli tiedoston nimeä ei tarvittu, koska Apache haki tämän automaattisesti
  - Eli index.html tulee automaattisesti ja muut tiedostot täytyy avata niiden nimellä URL-osoitteessa
 
 
