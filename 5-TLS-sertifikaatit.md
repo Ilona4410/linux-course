@@ -5,7 +5,7 @@
 ## DNS
 
 - Asensin tunnilla dig-työkalun komennolla sudo apt install dnsutils
-- Testasin, että DNS toimii oiken ja domain osoittaa oikeaan palvelimeen
+- Testasin, että DNS toimii oiken ja domain osoittaa etäpalvelimeni julkiseen IP-osoitteeseen 65.52.72.83
 
 
   ```
@@ -30,6 +30,25 @@
   ;; WHEN: Fri Apr 24 14:03:12 UTC 2026
   ;; MSG SIZE  rcvd: 68
   ```
+
+
+**DNS-liikenteen tarkkailu tcpdump-komennolla**
+- Avasin kaksi terminaalia. Toisessa komtento sudo tcpdump -i eth0 port 53 -n -v ja toisessa dig test026.linuxkurssi.xyz. Mitään liikennettä ei näkynyt. Tämä johtui varmaankin siitä, että olin kysynyt domainia jo aiemmin ja vastaus saatiin nyt välimuistista
+- Kun kokeilin kyselyä dig test026.linuxkurssi.xyz @8.8.8.8, liikennettä tuli näkyviin
+
+
+```
+linuxuser@test026:~$ sudo tcpdump -i eth0 port 53 -n -v
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+14:22:39.573927 IP (tos 0x0, ttl 64, id 5293, offset 0, flags [none], proto UDP (17), length 92)
+208.24.0.33.41614 > 8.8.8.8.53: 266+ [1au] A? test026.linuxkurssi.xyz. (64)
+14:22:39.600949 IP (tos 0x0, ttl 117, id 57200, offset 0, flags [none], proto UDP (17), length 96)
+8.8.8.8.53 > 208.24.0.33.41614: 266 1/0/1 test026.linuxkurssi.xyz. A 65.52.72.83 (68)
+```
+
+- Eli, toinen kysely pakotettiin ulkoiselle Googlen DNS-palvelimelle, ja näin saatiin ohitettua paikallinen välimuisti -> liikennettä näkyviin
+  
+
 
 ## Yhteenveto
 
