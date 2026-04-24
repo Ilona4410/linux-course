@@ -77,11 +77,11 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
 
   ```
   linuxuser@test026:~$ curl http://test026.linuxkurssi.xyz/
-<h1>Moi kaikki</h1>
-linuxuser@test026:~$ curl http://test026.linuxkurssi.xyz/file1.txt
-<h1>Toinen testi</h1>
-linuxuser@test026:~$ curl http://test026.linuxkurssi.xyz/editorfile.txt
-<h1>kolmas testi</h1>
+  <h1>Moi kaikki</h1>
+  linuxuser@test026:~$ curl http://test026.linuxkurssi.xyz/file1.txt
+  <h1>Toinen testi</h1>
+  linuxuser@test026:~$ curl http://test026.linuxkurssi.xyz/editorfile.txt
+  <h1>kolmas testi</h1>
   ```
 
 
