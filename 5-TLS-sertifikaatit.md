@@ -47,6 +47,30 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
 ```
 
 - Eli, toinen kysely pakotettiin ulkoiselle Googlen DNS-palvelimelle, ja näin saatiin ohitettua paikallinen välimuisti -> liikennettä näkyviin
+
+
+## Name-Based VirtualHost 
+
+- Loin tiedoston index.html komennolla nano /home/linuxuser/public-sites/index.html
+- Loin toisen tiedoston komennolla nano /home/linuxuser/public-sites/file1.txt
+- Koitin luoda kolmannen tiedoston komennolla sudo -u edituser nano /home/linuxuser/public-sites/editorfile.txt, mutta minulla ei vielä ollut edituseria
+- Loin edituserin komennolla sudo adduser edituser ja koitin tehdä tiedostoa uudestaan, mutta minulta puuttui oikeudet. Alla mitä tein:
+
+
+  ```
+  linuxuser@test026:~$ sudo usermod -aG edituser linuxuser
+  linuxuser@test026:~$ sudo chgrp edituser /home/linuxuser/public-sites
+  linuxuser@test026:~$ chmod g+w /home/linuxuser/public-sites
+  linuxuser@test026:~$ chmod g+x /home/linuxuser/public-sites
+  linuxuser@test026:~$ ls -ld /home/linuxuser/public-sites
+  drwxrwxr-x 2 linuxuser edituser 4096 Apr 24 14:44 /home/linuxuser/public-sites
+  ```
+  
+    - sudo usermod -aG edituser linuxuser = liitin käyttäjät samaan ryhmään
+    - sudo chgrp edituser /home/linuxuser/public-sites = kansio ryhmälle edituser
+    - chmod g+w /home/linuxuser/public-sites = ryhmälle kirjoitusoikeus
+    - chmod g+x /home/linuxuser/public-sites = ryhmälle pääsy kansioon
+    - ls -ld /home/linuxuser/public-sites = tarkistus (drwxrwxr-x)
   
 
 
