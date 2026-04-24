@@ -75,6 +75,9 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
       -> Sain luotua tiedoston ja kirjoitettua tähän sudo -u edituser nano /home/linuxuser/public-sites/editorfile.txt
 
 
+
+
+
   ```
   linuxuser@test026:~$ curl http://test026.linuxkurssi.xyz/
   <h1>Moi kaikki</h1>
