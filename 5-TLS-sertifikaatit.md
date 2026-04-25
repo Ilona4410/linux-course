@@ -135,6 +135,11 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
    * Donating to EFF:                    https://eff.org/donate-le
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   ```
+
+
+- Selaimessa näkyy lukko:
+  <img width="263" height="202" alt="35" src="https://github.com/user-attachments/assets/4c4de639-e8bf-4f36-8e83-eb459100a868" />
+
   
 
 
