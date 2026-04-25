@@ -90,6 +90,51 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
 
 
 ## TLS Certificate 
+
+- Asensin Certbotin komennolla sudo apt install certbot python3-certbot-apache
+- Loin TLS-sertifikaatin:
+
+
+  ```
+  linuxuser@test026:~$ sudo certbot --apache
+  Saving debug log to /var/log/letsencrypt/letsencrypt.log
+  Enter email address or hit Enter to skip.
+   (Enter 'c' to cancel): 
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Please read the Terms of Service at:
+  https://letsencrypt.org/documents/LE-SA-v1.6-August-18-2025.pdf
+  You must agree in order to register with the ACME server. Do you agree?
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  (Y)es/(N)o: y
+  Account registered.
+
+  Which names would you like to activate HTTPS for?
+  We recommend selecting either all domains, or all domains in a VirtualHost/server block.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  1: test026.linuxkurssi.xyz
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Select the appropriate numbers separated by commas and/or spaces, or leave input
+  blank to select all options shown (Enter 'c' to cancel): 
+  Requesting a certificate for test026.linuxkurssi.xyz
+
+  Successfully received certificate.
+  Certificate is saved at: /etc/letsencrypt/live/test026.linuxkurssi.xyz/fullchain.pem
+  Key is saved at:         /etc/letsencrypt/live/test026.linuxkurssi.xyz/privkey.pem
+  This certificate expires on 2026-07-24.
+  These files will be updated when the certificate renews.
+  Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+  Deploying certificate
+  Successfully deployed certificate for test026.linuxkurssi.xyz to /etc/apache2/sites-available/test026.linuxkurssi.xyz-le-ssl.conf
+  Congratulations! You have successfully enabled HTTPS on https://test026.linuxkurssi.xyz
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  If you like Certbot, please consider supporting our work by:
+   * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   * Donating to EFF:                    https://eff.org/donate-le
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  ```
   
 
 
