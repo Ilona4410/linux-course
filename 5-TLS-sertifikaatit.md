@@ -170,7 +170,101 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
   /etc/letsencrypt/live/test026.linuxkurssi.xyz/fullchain.pem (success)
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   ```
-  
+
+  ## Monitoring – curl in verbose mode
+
+- HTTPS-yhteys verbose-tilassa. Handshake-vaihe näkyy, eli asiakas ja palvelin muodostavat salatun yhteyden
+
+
+  ```
+  linuxuser@test026:~$ curl -v https://test026.linuxkurssi.xyz
+  * Host test026.linuxkurssi.xyz:443 was resolved.
+  * IPv6: (none)
+  * IPv4: 65.52.72.83
+  *   Trying 65.52.72.83:443...
+  * ALPN: curl offers h2,http/1.1
+  * TLSv1.3 (OUT), TLS handshake, Client hello (1):
+  *  CAfile: /etc/ssl/certs/ca-certificates.crt
+  *  CApath: /etc/ssl/certs
+  * TLSv1.3 (IN), TLS handshake, Server hello (2):
+  * TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+  * TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+  * TLSv1.3 (IN), TLS handshake, Certificate (11):
+  * TLSv1.3 (IN), TLS handshake, CERT verify (15):
+  * TLSv1.3 (IN), TLS handshake, Finished (20):
+  * TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+  * TLSv1.3 (OUT), TLS handshake, Finished (20):
+  * SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519MLKEM768 / id-ecPublicKey
+  * ALPN: server accepted http/1.1
+  * Server certificate:
+  *  subject: CN=test026.linuxkurssi.xyz
+  *  start date: Apr 25 05:18:43 2026 GMT
+  *  expire date: Jul 24 05:18:42 2026 GMT
+  *  subjectAltName: host "test026.linuxkurssi.xyz" matched cert's "test026.linuxkurssi.xyz"
+  *  issuer: C=US; O=Let's Encrypt; CN=E7
+  *  SSL certificate verify ok.
+  *   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+  *   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+  *   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+  * Connected to test026.linuxkurssi.xyz (65.52.72.83) port 443
+  * using HTTP/1.x
+  > GET / HTTP/1.1
+  > Host: test026.linuxkurssi.xyz
+  > User-Agent: curl/8.14.1
+  > Accept: */*
+  > 
+  * Request completely sent off
+  * TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+  * TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+  < HTTP/1.1 200 OK
+  < Date: Mon, 27 Apr 2026 10:55:49 GMT
+  < Server: Apache/2.4.66 (Debian)
+  < Last-Modified: Fri, 24 Apr 2026 14:42:53 GMT
+  < ETag: "14-65035c7ae5d7f"
+  < Accept-Ranges: bytes
+  < Content-Length: 20
+  < Content-Type: text/html
+  < 
+  <h1>Moi kaikki</h1>
+  * Connection #0 to host test026.linuxkurssi.xyz left intact
+  ```
+
+
+- HTTP-yhteyden testauksessä näkyy 301 Moved Permanently, eli liikenne ohjattiin HTTPS-osoitteeseen. Palvelin siis pakottaa käyttämään salattua yhteyttä
+
+
+  ```
+  linuxuser@test026:~$ curl -v http://test026.linuxkurssi.xyz
+  * Host test026.linuxkurssi.xyz:80 was resolved.
+  * IPv6: (none)
+  * IPv4: 65.52.72.83
+  *   Trying 65.52.72.83:80...
+  * Connected to test026.linuxkurssi.xyz (65.52.72.83) port 80
+  * using HTTP/1.x
+  > GET / HTTP/1.1
+  > Host: test026.linuxkurssi.xyz
+  > User-Agent: curl/8.14.1
+  > Accept: */*
+  > 
+  * Request completely sent off
+  < HTTP/1.1 301 Moved Permanently
+  < Date: Mon, 27 Apr 2026 11:01:01 GMT
+  < Server: Apache/2.4.66 (Debian)
+  < Location: https://test026.linuxkurssi.xyz/
+  < Content-Length: 369
+  < Content-Type: text/html; charset=iso-8859-1
+  < 
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+  <html><head>
+  <title>301 Moved Permanently</title>
+  </head><body>
+  <h1>Moved Permanently</h1>
+  <p>The document has moved <a href="https://test026.linuxkurssi.xyz/">here</a>.</p>
+  <hr>
+  <address>Apache/2.4.66 (Debian) Server at test026.linuxkurssi.xyz Port 80</address>
+  </body></html>
+  * Connection #0 to host test026.linuxkurssi.xyz left intact
+  ```
 
 
   
