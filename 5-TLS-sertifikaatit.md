@@ -140,6 +140,39 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
 - Selaimessa näkyy lukko:
   <img width="263" height="202" alt="35" src="https://github.com/user-attachments/assets/4c4de639-e8bf-4f36-8e83-eb459100a868" />
 
+
+- TLS-sertifikaatti tarkistus crt.sh-palvelussa
+  <img width="493" height="119" alt="36" src="https://github.com/user-attachments/assets/e99ac507-0ac1-4fd5-8d9a-36ac5f55caee" />
+
+- Testasin sertifikaatin uusimisen komennolla certbot renew --dry-run
+
+
+  ```
+  linuxuser@test026:~$ sudo certbot renew--dry-run
+  usage: 
+  certbot [SUBCOMMAND] [options] [-d DOMAIN] [-d DOMAIN] ...
+
+  Certbot can obtain and install HTTPS/TLS/SSL certificates.  By default,
+  it will attempt to use a webserver both for obtaining and installing the
+  certificate. 
+  certbot: error: unrecognized arguments: renew--dry-run
+  linuxuser@test026:~$ sudo certbot renew --dry-run
+  Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Processing /etc/letsencrypt/renewal/test026.linuxkurssi.xyz.conf
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Account registered.
+  Simulating renewal of an existing certificate for test026.linuxkurssi.xyz
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Congratulations, all simulated renewals succeeded: 
+  /etc/letsencrypt/live/test026.linuxkurssi.xyz/fullchain.pem (success)
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  ```
+  
+
+
   
 
 
