@@ -2,6 +2,8 @@
 
 ## Johdanto
 
+Tämän tehtävän tarkoituksena oli tutustua TLS-sertifikaattiin ja sen käyttöön palvelimella. Tavoitteena oli myös ymmärtää DNS:n toimintaa ja HTTP- ja HTTPS-liikenteen ominaisuuksia. 
+
 ## DNS
 
 - Asensin tunnilla dig-työkalun komennolla sudo apt install dnsutils
@@ -267,12 +269,50 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
   ```
 
 
+- Redirectin poisto väliaikaisesti muokkaamalla config-tiedostoa sudo nano /etc/apache2/sites-available/test026.linuxkurssi.xyz.conf
+  <img width="407" height="163" alt="37" src="https://github.com/user-attachments/assets/26ba86c4-0336-4304-8d05-0dcec7f9555c" />
+
+- Apachen lataus uudelleen komennolla sudo systemctl reload apache2
+- Testasin HTTP-yhteyttä uudelleen7
+
+
+  ```
+  linuxuser@test026:~$ curl -v http://test026.linuxkurssi.xyz
+  * Host test026.linuxkurssi.xyz:80 was resolved.
+  * IPv6: (none)
+  * IPv4: 65.52.72.83
+  *   Trying 65.52.72.83:80...
+  * Connected to test026.linuxkurssi.xyz (65.52.72.83) port 80
+  * using HTTP/1.x
+  > GET / HTTP/1.1
+  > Host: test026.linuxkurssi.xyz
+  > User-Agent: curl/8.14.1
+  > Accept: */*
+  > 
+  * Request completely sent off
+  < HTTP/1.1 200 OK
+  < Date: Mon, 27 Apr 2026 11:12:10 GMT
+  < Server: Apache/2.4.66 (Debian)
+  < Last-Modified: Fri, 24 Apr 2026 14:42:53 GMT
+  < ETag: "14-65035c7ae5d7f"
+  < Accept-Ranges: bytes
+  < Content-Length: 20
+  < Content-Type: text/html
+  < 
+  <h1>Moi kaikki</h1>
+  * Connection #0 to host test026.linuxkurssi.xyz left intact
+  ```
+
+
+- Kun redirect otettiin pois käytöstä, HTTP-liikennettä ei enää ohjattu HTTPS. Sivun sisältö <h1>Moi kaikki</h1> näkyy eli liikenne ei ole salattu
+
   
-
-
-  
-
-
 ## Yhteenveto
 
+Onnistuin asentamaan ja konfiguroimaan TLS-sertifikaation palvelimelle. DNS toimi myös oikein ja domain osoitti palvelimen julkiseen IP-osoitteeseen.
+
+Opin erityisesti HTTPS- ja HTTP-liikenteistä ja siitä, mikä vaikutus redirectillä on. Tehtävät auttoivat minua ymmärtämään, miten HTTPS suojaa liikennettä. 
+
 ## Lähteet
+
+- Heinonen, J. Domain Name and TLS Cerfiticates. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/module_5.md. Luettu: 27.4.2026.
