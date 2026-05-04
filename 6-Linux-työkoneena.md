@@ -25,12 +25,12 @@
   - Konfiguroin ~/.ssh/config -tiedostoa:
 
 
-```
-Host github.com
-HostName github.com
-User git
-IdentityFile ~/.ssh/github_key
-```
+  ```
+  Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github_key
+  ```
 
 
 ## Yhteenveto
