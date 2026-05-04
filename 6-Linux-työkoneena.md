@@ -17,7 +17,21 @@
   ilona@ilona:~$ git config --list
   user.name=Ilona
   user.email=12345678+username@users.noreply.github.com
-  ```  
+  ```
+
+
+  - Loin SSH-avainparin komennolla ssh-keygen -t ed25519 -C "github key" ja poluksi /home/ilona/.ssh/github_key
+    
+  - Konfiguroin ~/.ssh/config -tiedostoa:
+
+
+```
+Host github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/github_key
+```
+
 
 ## Yhteenveto
 
