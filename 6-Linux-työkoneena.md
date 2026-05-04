@@ -2,6 +2,8 @@
 
 ## Johdanto
 
+Tässä osiossa tutustuin Linuxiin työkoneena. Tavoitteena oli oppia Git-versionhallinnasta käytännössä. Harjoittelin tehtävissä Gitin perustoimintoja kuten repon kloonausta sekä oman tiedoston tekemistä ja lähettämistä. 
+
 ## Git
 
 - Varmistin GitHubista, että sähköpostin yksityisyys on päällä
@@ -13,7 +15,7 @@
 
   ```
   ilona@ilona:~$ git config --global user.name "Ilona"
-  ilona@ilona:~$ git config --global user.email "12345678+username@users.noreply.github.com"
+  ilona@ilona:~$ git config --global user.email "228961716+Ilona4410@users.noreply.github.com"
   ilona@ilona:~$ git config --list
   user.name=Ilona
   user.email=12345678+username@users.noreply.github.com
@@ -46,7 +48,7 @@
   Hi Ilona4410! You've successfully authenticated, but GitHub does not provide shell access.
   ```
 
-- Latasin/kopioin kussin repon omalle virtuaalikoneelleni komennolla ```git clone git@github.com:linux-spring-26/git-testing.git```
+- Latasin/kloonasin kussin repon omalle virtuaalikoneelleni komennolla ```git clone git@github.com:linux-spring-26/git-testing.git```
 - Loin tiedoston ilona_testi.txt ja lisäsin sinne perusvinkin
 
 
@@ -82,4 +84,8 @@ Voisin rakentaa Linux-pohjaisen työaseman kuten Debian tai Ubuntu, nämä ovat 
 
 ## Yhteenveto
 
+Opin konfiguroimaan Git ja SSH-yhteyden käytännön harjoitusten ansiosta. Onnistuin repon kloonauksessa sekä tiedoston tekemisessä ja lähettämisessä GitHubiin. Valitettavasti aika tehtävien tekemiseen loppui kesken enkä ehtinyt asentaa omavalintaista työkalua. 
+
 ## Lähteet
+
+Heinonen, J. Linux as a Development Workstation. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/module_6.md. Luettu: 4.5.2026.
