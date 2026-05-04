@@ -46,6 +46,40 @@
   Hi Ilona4410! You've successfully authenticated, but GitHub does not provide shell access.
   ```
 
+- Latasin/kopioin kussin repon omalle virtuaalikoneelleni komennolla ```git clone git@github.com:linux-spring-26/git-testing.git```
+- Loin tiedoston ilona_testi.txt ja lisäsin sinne perusvinkin
+
+
+  ```
+  ilona@ilona:~/git-testing$ nano ilona_testi.txt
+  ilona@ilona:~/git-testing$ git status
+  On branch main
+  Your branch is up to date with 'origin/main'.
+
+  Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	ilona_testi.txt
+
+  nothing added to commit but untracked files present (use "git add" to track)
+  ilona@ilona:~/git-testing$ git push
+  Enumerating objects: 4, done.
+  Counting objects: 100% (4/4), done.
+  Delta compression using up to 2 threads
+  Compressing objects: 100% (3/3), done.
+  Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+  Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+  remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+  To github.com:linux-spring-26/git-testing.git
+  e8ebc3c..ab5a382  main -> main
+  ```
+
+
+- Oma julkaisuni näkyy osoitteessa https://github.com/linux-spring-26/git-testing
+
+
+
+  
+
 
 
 
