@@ -76,14 +76,9 @@
 
 - Oma julkaisuni näkyy osoitteessa https://github.com/linux-spring-26/git-testing
 
+## Development Workstation 
 
-
-  
-
-
-
-
-
+Voisin rakentaa Linux-pohjaisen työaseman kuten Debian tai Ubuntu, nämä ovat ilmeisesti melko samanlaisia. GitHubia voisi käyttää versionhallintaan ja Visual Studio Code -editoria koodaukseen. Näistä minulla on nyt hieman käyttökokemusta. Docker ei ole minulle tuttu, mutta tiedän, että tätä käytetään konttien ajamiseen. SSH-avaimet olisivat toki myös käytössä turvalliseen ja helppoon yhteyteen. 
 
 ## Yhteenveto
 
