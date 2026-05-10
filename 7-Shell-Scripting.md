@@ -32,7 +32,7 @@
   HISTFILESIZE=4000
   ```
 
-- Muutosten ansiosta minulla on nyt enemmän historiaa käytettävissä. Alla viimeisimmät komentoni:
+- Muutosten ansiosta komentorivi muistaa nyt enemmän komentoja. Alla viimeisimmät komentoni:
 
 
   ```
@@ -49,7 +49,21 @@
   nano ~/.bashrc
   ```
 
-  
+
+## Shell Script 
+
+- Aloitin luomaan skriptin komennolla ```nano project_script.sh```
+
+  <img width="628" height="189" alt="image" src="https://github.com/user-attachments/assets/c9ef5408-e46b-4baf-a821-20d4bc6a2420" />
+
+- Asetin oikeudet komennolla ```chmod u+x project_script.sh```
+
+  ```
+  ilona@ilona:~$ ll project_script.sh
+  -rwxrw-r-- 1 ilona ilona 127 10. 5. 18:26 project_script.sh
+  ```
+
+
 
 
 
