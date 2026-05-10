@@ -2,6 +2,10 @@
 
 ## Johdanto
 
+Tässä tehtävässä tutustuin Bash Shellin toimintaan ja konfigurointiin. Lisäksi pääsin harjoittelemaan ensimmäistä kertaa yksinkertaisen skriptin tekoa. 
+
+Tavoitteena oli ymmärtää miten, miten komentorivin toimintaa voidaan muokata ja kuinka pieniä toistuvia tehtäviä voidaan automatisoida skriptien avulla. 
+
 ## Bash Shell 
 
 - Aloitin tekemällä varmuuskopion Bash Shellin asetustiedostosta komennolla ```cp ~/.bashrc ~/.bashrc_backup```
@@ -72,11 +76,12 @@
   ```
 
 
-
-
-
-
-
 ## Yhteenveto
 
+Onnistuin muokkaamaan Bash Shellin asetustiedostoa lisäämällä aloitusviestin ja kaksi alias-komentoa. Muutin myös HISTSIZE- ja HISTFILESIZE-arvoja, jolloin komentohistoria säilyttää enemmän aiempia komentoja. Loin myös Bash-skriptin, joka automatisoi kansion ja tiedoston luomisen sekä kirjoittaa tiedostoon käyttäjänimen ja päivämäärän.
+
+Tämä oli kurssin viimeinen raportti/tehtäväkokonaisuus. Samalla tämä oli henkilökohtainen suosikkini kaikista tehtävistä. Harmikseni en ehtinyt tekemään kaikkia tämän viikon tehtäviä, mutta jään varmaan kokeilemaan näitä myöhemmin. Tykkäsin näistä tehtävistä, koska Bashin toiminta ja skripti tuntuivat jotenkin käytännöllisiltä ja helposti ymmärrettäviltä. 
+
 ## Lähteet
+
+Heinonen, J. Linux Shell Scripting Basics. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/module_7.md. Luettu: 10.5.2026.
