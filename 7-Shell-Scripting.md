@@ -4,7 +4,7 @@
 
 Tässä tehtävässä tutustuin Bash Shellin toimintaan ja konfigurointiin. Lisäksi pääsin harjoittelemaan ensimmäistä kertaa yksinkertaisen skriptin tekoa. 
 
-Tavoitteena oli ymmärtää miten, miten komentorivin toimintaa voidaan muokata ja kuinka pieniä toistuvia tehtäviä voidaan automatisoida skriptien avulla. 
+Tavoitteenani oli ymmärtää, miten komentorivin toimintaa voidaan muokata ja kuinka pieniä toistuvia tehtäviä voidaan automatisoida skriptien avulla. 
 
 ## Bash Shell 
 
