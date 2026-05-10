@@ -63,6 +63,14 @@
   -rwxrw-r-- 1 ilona ilona 127 10. 5. 18:26 project_script.sh
   ```
 
+- Skriptin ajo komennolla ```./project_script.sh```. Alla tulos
+
+  ```
+  ilona@ilona:~$ cat project/info.txt
+  Username: ilona
+  Date: su 10.5.2026 18.28.57 +0300
+  ```
+
 
 
 
